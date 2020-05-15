@@ -23,9 +23,9 @@ public class PlayerMovement : MonoBehaviour
         //Adds an value to the vector depending on wich key is pressed
         Vector3 _movement = Vector3.zero;
         _movement += Input.GetKey(KeyCode.W) ? transform.forward : Vector3.zero;
-        _movement += Input.GetKey(KeyCode.A) ? new Vector3(-1, 0, 0) : Vector3.zero;
+        _movement += Input.GetKey(KeyCode.A) ? -transform.right : Vector3.zero;
         _movement += Input.GetKey(KeyCode.S) ? -transform.forward : Vector3.zero;
-        _movement += Input.GetKey(KeyCode.D) ? new Vector3(1, 0, 0) : Vector3.zero;
+        _movement += Input.GetKey(KeyCode.D) ? transform.right : Vector3.zero;
         _movement.Normalize();
 
         //Sets the player sprint speed when shift is pressed
