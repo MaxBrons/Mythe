@@ -10,9 +10,9 @@ public class PlayerHealth : MonoBehaviour
 
     public void Damage(float amount) {
         //(3f - (_health * (_health / 10000)))/10;  for vignette effect
-        if (_health > 0) {
-            OnPlayerDamage?.Invoke();
-        }
+        if (_health <= 0) return;
+
+        OnPlayerDamage?.Invoke();
         _health -= amount;
     }
 }

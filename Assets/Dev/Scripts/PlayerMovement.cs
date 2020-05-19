@@ -2,24 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float _rotationSpeed = 1;
-    [SerializeField] private float _movementSpeed = 1f;
-    [SerializeField] private float _sprintSpeed = 1f;
-    //[SerializeField] private float _movementSteps = 1f;
-    [SerializeField] private float _movementMagnitude = 2f;
+    [SerializeField] private float _movementSpeed = 1f; //The rate at wich the player moves
+    [SerializeField] private float _sprintSpeed = 1f; //The rate at wich the player sprints
+
     private Rigidbody _rb;
 
     private void Start() {
         _rb = GetComponent<Rigidbody>();
     }
-
     private void Update() {
-        //Rotate the player to the mouse position
-        Vector3 mousePos = new Vector3(0, Input.GetAxis("Mouse X"), 0);
-        transform.eulerAngles += mousePos;
-
         //Adds an value to the vector depending on wich key is pressed
         Vector3 _movement = Vector3.zero;
         _movement += Input.GetKey(KeyCode.W) ? transform.forward : Vector3.zero;
@@ -32,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
         float _playerSprintSpeed = Input.GetKey(KeyCode.LeftShift) ? _sprintSpeed : 1;
 
         //Moves the player in the _movement vector's direction
-        if (_movement.magnitude <= _movementMagnitude && _movement != Vector3.zero)
-            transform.position += _movement * _playerSprintSpeed * _movementSpeed * Time.deltaTime;
+        if (_movement.magnitude > 0 && _movement != Vector3.zero)
+            _rb.MovePosition(transform.position + _movement * _playerSprintSpeed * _movementSpeed * Time.deltaTime);
     }
 }
