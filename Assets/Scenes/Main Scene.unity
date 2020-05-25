@@ -623,7 +623,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 367901393}
-  m_Material: {fileID: 13400000, guid: 748901163c8d2604eb1a850f99e36d99, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
@@ -670,7 +670,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 434903421}
-  m_Material: {fileID: 13400000, guid: 748901163c8d2604eb1a850f99e36d99, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
@@ -750,7 +750,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 468689168}
-  m_Material: {fileID: 13400000, guid: 748901163c8d2604eb1a850f99e36d99, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
@@ -2690,6 +2690,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cave Sections
       objectReference: {fileID: 0}
+    - target: {fileID: 31315878595722610, guid: 8b4f3d3be1f4c21478afc3138c36b237,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b4f3d3be1f4c21478afc3138c36b237, type: 3}
 --- !u!1001 &3927121771366999163
@@ -2699,6 +2704,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1797285686755691391, guid: 6a6ed70a6df2bbd4abb34b731b3c2d4d,
+        type: 3}
+      propertyPath: _sprintSpeed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2886233386072479761, guid: 6a6ed70a6df2bbd4abb34b731b3c2d4d,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -2707,7 +2717,7 @@ PrefabInstance:
     - target: {fileID: 2886233386072479761, guid: 6a6ed70a6df2bbd4abb34b731b3c2d4d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.903
       objectReference: {fileID: 0}
     - target: {fileID: 2886233386072479761, guid: 6a6ed70a6df2bbd4abb34b731b3c2d4d,
         type: 3}
@@ -2757,7 +2767,7 @@ PrefabInstance:
     - target: {fileID: 6679184856000359454, guid: 6a6ed70a6df2bbd4abb34b731b3c2d4d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.12
+      value: 6.334
       objectReference: {fileID: 0}
     - target: {fileID: 6679184856000359454, guid: 6a6ed70a6df2bbd4abb34b731b3c2d4d,
         type: 3}
