@@ -5,48 +5,45 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class Sound : MonoBehaviour
 {
+    private enum SoundType
+    {
+        Background, Ambient
+    }
     [SerializeField] private AudioClip _clip;
-    [SerializeField] private bool _ambient = false;
-    [SerializeField] private float _waitForNextAmbientSound = 120;
+    [SerializeField] private SoundType _soundType;
+    [SerializeField] private float _waitForNextSound = 120;
     private AudioSource _source;
 
-    private void Awake()
-    {
+    private void Awake() {
         _source = GetComponent<AudioSource>();
     }
 
-    private void Start()
-    {
-        if (!_ambient) StartCoroutine("PlaySound");
-        else
-        {
-            IEnumerator ambient = PlaySound(_waitForNextAmbientSound);
-            StartCoroutine(ambient);
-        }
+    private void Start() {
+        if (_soundType == SoundType.Background) StartCoroutine(PlayRandomRepeatingSound());
+        else if (_soundType == SoundType.Ambient) StartCoroutine(PlayRepeatingSound());
     }
 
-    private IEnumerator PlaySound(float time)
-    {
-        while (true)
-        {
-            new WaitForSeconds(time);
+    private IEnumerator PlayRepeatingSound() {
+        while (true) {
             _source.clip = _clip;
             _source.Play();
+            yield return new WaitForSecondsRealtime(_waitForNextSound);
         }
     }
 
-    private IEnumerator PlayRepeatingSound()
-    {
-        while (true)
-        {
-            if (!_clip) break;
+    private IEnumerator PlayRandomRepeatingSound() {
+        if (!_clip) SetRandomAudioClip();
+        while (true) {
             _source.clip = _clip;
             _source.Play();
             yield return new WaitUntil(() => !_source.isPlaying);
-
-            AudioClip[] audioclips = GetComponent<SoundTemplate>().GetSoundClip();
-            _clip = audioclips[Random.Range(0, audioclips.Length)];
+            SetRandomAudioClip();
         }
+    }
+
+    private void SetRandomAudioClip() {
+        AudioClip[] audioclips = GetComponent<SoundTemplate>().GetSoundClip();
+        _clip = audioclips[Random.Range(0, audioclips.Length)];
     }
 
 
