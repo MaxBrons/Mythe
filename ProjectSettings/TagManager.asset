@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Spawnpoint
   - CaveSections
+  - Main Player
+  - AI Civilian
+  - Managers
   layers:
   - Default
   - TransparentFX
@@ -16,8 +19,8 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
-  - 
+  - Player
+  - Civilian
   - 
   - 
   - 

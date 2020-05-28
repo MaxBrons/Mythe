@@ -35,11 +35,12 @@ public class CameraController : MonoBehaviour
 
     private void Update() {
         //Sets the Camera's position to the position of the object it follows
-        transform.position = _objectToFollow.position + new Vector3(0, _heightFromObject, _distanceFromObject);
+        if(_objectToFollow)
+            transform.position = _objectToFollow.position + new Vector3(0, _heightFromObject, _distanceFromObject);
     }
 
     private void FixedUpdate() {
-        if (_lookDirection == Vector2.zero) return;
+        if (_lookDirection == Vector2.zero || !_objectToFollow) return;
 
         //Clamps the camera's y axis
         Vector3 mousePosition = new Vector3(_lookDirection.y, _lookDirection.x, 0) * _rotationSpeed * Time.deltaTime;
@@ -51,6 +52,6 @@ public class CameraController : MonoBehaviour
         _rb.MoveRotation(Quaternion.Euler(_xRotation, transform.eulerAngles.y + mousePosition.y, 0f));
 
         //Updates the rotation of the object the camera is following depending on the mouse position of the player
-        _objectToFollow?.GetComponent<Rigidbody>()?.MoveRotation(Quaternion.Euler(new Vector3(0, _rb.rotation.eulerAngles.y, 0)));
+        _objectToFollow.GetComponent<Rigidbody>().MoveRotation(Quaternion.Euler(new Vector3(0, _rb.rotation.eulerAngles.y, 0)));
     }
 }
