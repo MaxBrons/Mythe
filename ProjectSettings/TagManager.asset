@@ -9,6 +9,9 @@ TagManager:
   - Main Player
   - AI Civilian
   - Managers
+  - NavMeshSurfaces
+  - IntersectionCaveSection
+  - ClosedCaveSection
   layers:
   - Default
   - TransparentFX
@@ -21,7 +24,7 @@ TagManager:
   - PostProcessing
   - Player
   - Civilian
-  - 
+  - WalkableSurface
   - 
   - 
   - 

@@ -1,7 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.AI;
 public class CaveSectionTemplate : MonoBehaviour
 {
     /// <summary>
@@ -10,6 +9,11 @@ public class CaveSectionTemplate : MonoBehaviour
     [SerializeField] private List<GameObject> _caveSections;
     [SerializeField] private GameObject _closedSection;
     [SerializeField] private GameObject _intersection;
+    [SerializeField] private GameObject _navMeshSurfaces;
+
+    private void Start() => Invoke("UpdateNavMesh", 10f);
+
+    private void UpdateNavMesh(){}
 
     #region Getters & Setters
     public List<GameObject> GetSpawnableSections() {
@@ -20,6 +24,9 @@ public class CaveSectionTemplate : MonoBehaviour
     }
     public GameObject GetIntersection() {
         return _intersection;
+    }
+    public void AddCaveSurface(GameObject surface) {
+        surface.transform.SetParent(_navMeshSurfaces.transform);
     }
     #endregion
 }

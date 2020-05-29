@@ -75,5 +75,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnpointdirection: 0
-  _dependecySection: {fileID: 644819975567295097, guid: 2ee21bdf2e773b14f86b15a8a4aa8d41,
+  _dependecySection: {fileID: 446774456379309158, guid: fa08f7bfa10c50f479f124218c09f8c2,
     type: 3}
