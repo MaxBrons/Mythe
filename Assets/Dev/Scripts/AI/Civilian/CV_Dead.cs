@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CV_Dead : CV_State
 {
-    [SerializeField] private EventHandler _eventHandler;
     public override void Awake() => base.Awake();
     public override void StartState() {
         base.StartState();

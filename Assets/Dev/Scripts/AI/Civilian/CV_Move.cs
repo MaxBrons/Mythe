@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CV_Move : CV_State
 {
-    [SerializeField] private EventHandler _eventHandler;
     public override void Awake() {
         base.Awake();
         _eventHandler.OnPlayerMakingNoice += MoveTowardsNoice; 
@@ -13,7 +12,7 @@ public class CV_Move : CV_State
     //Gets called when the state is set to active state
     public override void StartState() {
         base.StartState();
-        _civilian.SetMovementSpeed(2); //Sets the movement speed of the NavMeshAgent
+        _civilian.SetMovementSpeed(3.5f); //Sets the movement speed of the NavMeshAgent
     }
 
     //Gets called when you break out of the state by switching to an other state

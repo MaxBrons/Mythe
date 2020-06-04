@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1175240161043776626}
   - component: {fileID: 2647574891643838542}
   - component: {fileID: 8763857407539991693}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: polySurface26_dead_end_straight1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 7032964297543078221, guid: ba331f4b5b740a24b808b7e798e8af39, type: 3}
+  - {fileID: 2100000, guid: 7c42e417749473e4880fb195b325963b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -185,7 +185,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -8147830141730727598, guid: ba331f4b5b740a24b808b7e798e8af39, type: 3}
+  - {fileID: 2100000, guid: 7c42e417749473e4880fb195b325963b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

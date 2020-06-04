@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 9132829897020173461, guid: 7ded8a8df7fa95f4aa11491afe093c05, type: 3}
+  - {fileID: 2100000, guid: 8d045b5d0e0c6df4ca538bc49acd058a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 9135329625515651382}
   - component: {fileID: 2677410193655622434}
   - component: {fileID: 8649049409821849003}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: straight_door1_polySurface5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,7 +153,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6301024233730043940, guid: 7ded8a8df7fa95f4aa11491afe093c05, type: 3}
+  - {fileID: 2100000, guid: 8d045b5d0e0c6df4ca538bc49acd058a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -283,7 +283,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -2203049691074422593, guid: 7ded8a8df7fa95f4aa11491afe093c05, type: 3}
+  - {fileID: 2100000, guid: 8d045b5d0e0c6df4ca538bc49acd058a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -377,7 +377,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6975352140158988841, guid: 7ded8a8df7fa95f4aa11491afe093c05, type: 3}
+  - {fileID: 2100000, guid: 8d045b5d0e0c6df4ca538bc49acd058a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -471,7 +471,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1732975034742266322, guid: 7ded8a8df7fa95f4aa11491afe093c05, type: 3}
+  - {fileID: 2100000, guid: 8d045b5d0e0c6df4ca538bc49acd058a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -572,6 +572,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spawnpoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 3263623663510536189, guid: c0d3ea1cf87952748999bc3bbb1459fb,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0d3ea1cf87952748999bc3bbb1459fb, type: 3}

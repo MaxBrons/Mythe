@@ -11,7 +11,7 @@ public class CV_Attack : CV_State
     //Gets called when the state is set to active state
     public override void StartState() {
         base.StartState();
-        _civilian.SetMovementSpeed(3); //Sets the movement speed of the NavMeshAgent
+        _civilian.SetMovementSpeed(5); //Sets the movement speed of the NavMeshAgent
         _civilian.GetNavMeshAgent().stoppingDistance = _civilian.GetAttackRange(); //Sets the stopping distance of the NavMeshAgent
     }
 
@@ -33,7 +33,6 @@ public class CV_Attack : CV_State
         if (_attackAnimationRunning) return;
         if (Vector3.Distance(transform.position,_civilian.GetTarget().transform.position) < _civilian.GetAttackRange())
             StartCoroutine(Attack());
-
     }
 
     //This is to check when to break out of a state or to switch to an other state
@@ -56,7 +55,6 @@ public class CV_Attack : CV_State
         _attackAnimationRunning = true;
         yield return new WaitForSecondsRealtime(.5f);
 
-        Debug.Log("Player damaged");
         if(_civilian.GetTarget())
             _civilian.GetTarget().GetComponent<PlayerHealth>().Damage(_civilian.GetAttackDamage());
         _attackAnimationRunning = false;

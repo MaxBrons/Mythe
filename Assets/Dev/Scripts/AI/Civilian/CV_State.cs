@@ -13,8 +13,10 @@ public abstract class CV_State : MonoBehaviour
     protected CV_StateMachine _stateMachine;
     protected Civilian _civilian;
     protected Animator _animator;
+    protected EventHandler _eventHandler;
 
     public virtual void Awake() {
+        _eventHandler = EventHandler.Instance;
         _civilian = GetComponent<Civilian>();
         _stateMachine = GetComponent<CV_StateMachine>();
         //_animator = GetComponent<Animator>();
