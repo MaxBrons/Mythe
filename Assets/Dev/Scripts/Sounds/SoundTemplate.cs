@@ -5,7 +5,7 @@ using UnityEngine;
 public class SoundTemplate : MonoBehaviour
 {
 
-    [Header("Sounds")]
+    [Header(Constants._soundHeader)]
     [SerializeField] private AudioClip[] _soundClips;
 
     public AudioClip[] GetSoundClip()

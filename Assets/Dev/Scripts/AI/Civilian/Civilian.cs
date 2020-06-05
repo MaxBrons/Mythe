@@ -8,7 +8,7 @@ public class Civilian : MonoBehaviour
     /// Holds all variables that the civilian/navmeshagent has
     /// </summary>
     [SerializeField] private NavMeshAgent _navAgent;
-    [SerializeField] private float _health = 100;
+    [SerializeField] private float _maxHealth = 100;
     [SerializeField] private float _movementSpeed = 3.5f;
     [SerializeField] private float _attackSpeed = 1;
     [SerializeField] private float _attackRange = 3;
@@ -23,18 +23,15 @@ public class Civilian : MonoBehaviour
     }
 
     #region Getters & Setters
-    public float GetHealth() { return _health; }
-    public void SetHealth(float value) => _health = value;
-    public float GetMovementSpeed() { return _navAgent.speed; }
-    public void SetMovementSpeed(float value) => _navAgent.speed = value;
-    public float GetAttackSpeed() { return _attackSpeed; }
-    public void SetAttackSpeed(float value) => _attackSpeed = value;
+    public float GetMaxHealth() { return _maxHealth; }
     public float GetAttackDamage() { return _attackDamage; }
     public float GetAttackRange() { return _attackRange; }
     public float GetSightRange() { return _sightRange; }
     public float GetHearingRange() { return _hearingRange; }
     public NavMeshAgent GetNavMeshAgent() { return _navAgent; }
-    public void SetTarget(GameObject target) => _target = target;
     public GameObject GetTarget() { return _target; }
+
+    public void SetMovementSpeed(float value) => _navAgent.speed = value;
+    public void SetTarget(GameObject target) => _target = target;
     #endregion
 }

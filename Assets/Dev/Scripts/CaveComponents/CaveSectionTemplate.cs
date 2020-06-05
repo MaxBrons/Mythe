@@ -10,7 +10,7 @@ public class CaveSectionTemplate : MonoBehaviour
     [SerializeField] private GameObject _closedSection;
     [SerializeField] private GameObject _intersection;
 
-    private void Start() => Invoke("UpdateNavMesh", 10f);
+    private void Start() => Invoke(Constants._caveSectionTemplateFunctionName, 10f);
 
     private void UpdateNavMesh(){}
 

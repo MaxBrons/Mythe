@@ -22,7 +22,8 @@ public class PlayerMovement : MonoBehaviour
     }
     private void OnDisable() {
         //Disables the input scheme
-        _inputMaster.Player.Disable();
+        _inputMaster.Player.Move.Disable();
+        _inputMaster.Player.Sprint.Disable();
     }
     private void Awake() {
         _inputMaster = new InputMaster();
