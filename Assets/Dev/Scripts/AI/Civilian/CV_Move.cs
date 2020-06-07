@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class CV_Move : CV_State
 {
-    public override void Awake() {
-        base.Awake();
+    public override void Start() {
+        base.Start();
         _eventHandler.OnPlayerMakingNoice += MoveTowardsNoice; 
     }
 

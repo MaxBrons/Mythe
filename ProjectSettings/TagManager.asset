@@ -12,6 +12,7 @@ TagManager:
   - NavMeshSurfaces
   - IntersectionCaveSection
   - ClosedCaveSection
+  - NavMeshComponents
   layers:
   - Default
   - TransparentFX

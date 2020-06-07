@@ -5,10 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/Sprint 1 Scene.unity
-    guid: e1b8e42c80988cc46b7968b172bf5d6d
   - enabled: 1
-    path: Assets/Scenes/Map sprint 2.unity
-    guid: 6491cf581ab5fd7439565d39c12038ce
+    path: Assets/Scenes/Main Scenes/Starting Room.unity
+    guid: 1a395cc5ba50ba547a4e12e2a1ee242e
+  - enabled: 1
+    path: Assets/Scenes/Main Scenes/Main Scene.unity
+    guid: b270c4b34a2ec2244a3f82cd8f69749b
+  - enabled: 1
+    path: Assets/Scenes/Main Scenes/Objective Rooms Scene.unity
+    guid: cb492330a152bfd4090334deca9681cb
   m_configObjects: {}

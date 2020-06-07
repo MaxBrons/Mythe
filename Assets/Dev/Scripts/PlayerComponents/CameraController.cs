@@ -30,7 +30,7 @@ public class CameraController : MonoBehaviour
 
         //Hides and locks the players cursor in place
         Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = true;
+        Cursor.visible = false;
     }
 
     private void Update() {

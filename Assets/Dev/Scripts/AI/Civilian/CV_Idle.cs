@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CV_Idle : CV_State
 {
-    public override void Awake() => base.Awake();
+    public override void Start() => base.Start();
 
     //Gets called when the state is set to active state
     public override void StartState() {

@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -14,7 +12,7 @@ public class PlayerHealth : MonoBehaviour
     public void Damage(float amount) {
         //(3f - (_health * (_health / 10000)))/10;  for vignette effect
         if (_health <= 0) {
-            Destroy(gameObject);
+            SceneManager.LoadScene(0);
             return;
         }
         _eventHandler.DamagePlayer();

@@ -6,7 +6,7 @@ public class CV_Attack : CV_State
 {
     private bool _attackAnimationRunning = false;
 
-    public override void Awake() => base.Awake();
+    public override void Start() => base.Start();
 
     //Gets called when the state is set to active state
     public override void StartState() {

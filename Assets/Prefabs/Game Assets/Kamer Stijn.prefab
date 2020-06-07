@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7915049851730502384}
   - component: {fileID: 5157208192340099983}
   - component: {fileID: 6133381819937199116}
+  - component: {fileID: 6381860432955217039}
   m_Layer: 0
   m_Name: Carpenting_room_Random_furniture_Chair2
   m_TagString: Untagged
@@ -79,6 +80,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6381860432955217039
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 209485387965588970}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6689799525074420614, guid: 1f1b98e03401ea8429c3b1827903d363, type: 3}
 --- !u!1 &541889945080354859
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,6 +105,7 @@ GameObject:
   - component: {fileID: 7985323839624933200}
   - component: {fileID: 6679116059153137528}
   - component: {fileID: 2540852283781453691}
+  - component: {fileID: 5223794419948321942}
   m_Layer: 0
   m_Name: Carpenting_room_Random_furniture_tablesimple2
   m_TagString: Untagged
@@ -158,6 +174,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5223794419948321942
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541889945080354859}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6836243073981284894, guid: 1f1b98e03401ea8429c3b1827903d363, type: 3}
 --- !u!1 &1248420061524513979
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,6 +199,7 @@ GameObject:
   - component: {fileID: 948033208446170227}
   - component: {fileID: 6373510328014454207}
   - component: {fileID: 863056475049590475}
+  - component: {fileID: 3977667608905870725}
   m_Layer: 0
   m_Name: Carpenting_room_Random_furniture_tablesimple
   m_TagString: Untagged
@@ -237,6 +268,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &3977667608905870725
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248420061524513979}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6871821396045704197, guid: 1f1b98e03401ea8429c3b1827903d363, type: 3}
 --- !u!1 &1320422583301764297
 GameObject:
   m_ObjectHideFlags: 0
@@ -246,8 +291,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2596409362654955226}
+  - component: {fileID: 6455406059090950913}
   m_Layer: 0
-  m_Name: Carpenters room
+  m_Name: Kamer Stijn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -261,8 +307,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1320422583301764297}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.6, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 7451837380906591224}
   - {fileID: 3972963088719233018}
@@ -285,9 +331,24 @@ Transform:
   - {fileID: 6527793159469406730}
   - {fileID: 21392363131615757}
   - {fileID: 1367711876268300321}
+  - {fileID: 523904998624354211}
+  - {fileID: 4295109342124554191}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6455406059090950913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320422583301764297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5651ccefe5ff1a47978113c3a820f4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spawnpoint: {fileID: 4295109342124554191}
 --- !u!1 &1412128545932074135
 GameObject:
   m_ObjectHideFlags: 0
@@ -299,6 +360,7 @@ GameObject:
   - component: {fileID: 420231362588942227}
   - component: {fileID: 2821812312498930285}
   - component: {fileID: 68296199605390248}
+  - component: {fileID: 4930519468838624590}
   m_Layer: 0
   m_Name: Carpenting_room_Random_furniture_Chair3
   m_TagString: Untagged
@@ -367,6 +429,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4930519468838624590
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412128545932074135}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2284915957860078540, guid: 1f1b98e03401ea8429c3b1827903d363, type: 3}
 --- !u!1 &1821279124691792177
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,6 +522,36 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1 &2870186793321342115
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4295109342124554191}
+  m_Layer: 0
+  m_Name: Spawnpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4295109342124554191
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2870186793321342115}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 5.194, y: 1.183, z: -0.113}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2596409362654955226}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &3398944577009659693
 GameObject:
   m_ObjectHideFlags: 0
@@ -457,6 +563,7 @@ GameObject:
   - component: {fileID: 1140063088547571474}
   - component: {fileID: 2689455635758877152}
   - component: {fileID: 1913395524447128257}
+  - component: {fileID: 3113017885077470656}
   m_Layer: 0
   m_Name: Carpenting_room_Random_furniture_tablesimple1
   m_TagString: Untagged
@@ -525,6 +632,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &3113017885077470656
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3398944577009659693}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6368155390948653903, guid: 1f1b98e03401ea8429c3b1827903d363, type: 3}
 --- !u!1 &3599331078783705436
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,6 +657,7 @@ GameObject:
   - component: {fileID: 2629753302620301767}
   - component: {fileID: 7538754784392880282}
   - component: {fileID: 2567727548199668892}
+  - component: {fileID: 6572550586153857484}
   m_Layer: 0
   m_Name: Carpenting_room_Random_furniture_Chair
   m_TagString: Untagged
@@ -604,6 +726,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6572550586153857484
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3599331078783705436}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7955059147085640097, guid: 1f1b98e03401ea8429c3b1827903d363, type: 3}
 --- !u!1 &6239528690322648042
 GameObject:
   m_ObjectHideFlags: 0
@@ -615,6 +751,7 @@ GameObject:
   - component: {fileID: 3501173236782466935}
   - component: {fileID: 4042935655516787390}
   - component: {fileID: 5577608677911465841}
+  - component: {fileID: 6465380581203105982}
   m_Layer: 0
   m_Name: Carpenting_room_Random_furniture_Chair1
   m_TagString: Untagged
@@ -683,6 +820,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6465380581203105982
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6239528690322648042}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7797988736024411027, guid: 1f1b98e03401ea8429c3b1827903d363, type: 3}
 --- !u!1 &6430202622731924332
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,6 +845,7 @@ GameObject:
   - component: {fileID: 1367711876268300321}
   - component: {fileID: 3568346359095987868}
   - component: {fileID: 5926286202994213139}
+  - component: {fileID: 728191064386588700}
   m_Layer: 0
   m_Name: Kamer_id_Kamer1_Carpenting_room
   m_TagString: Untagged
@@ -762,6 +914,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &728191064386588700
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6430202622731924332}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6475045718940231416, guid: 1f1b98e03401ea8429c3b1827903d363, type: 3}
 --- !u!1 &6673188531605918200
 GameObject:
   m_ObjectHideFlags: 0
@@ -931,6 +1097,7 @@ GameObject:
   - component: {fileID: 6527793159469406730}
   - component: {fileID: 5431717942272404889}
   - component: {fileID: 1826052089489028192}
+  - component: {fileID: 8441992752012213402}
   m_Layer: 0
   m_Name: Carpenting_room_Workbench_Table
   m_TagString: Untagged
@@ -999,6 +1166,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8441992752012213402
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6948796442512145506}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5476556249728631634, guid: 1f1b98e03401ea8429c3b1827903d363, type: 3}
 --- !u!1 &7239062762115027706
 GameObject:
   m_ObjectHideFlags: 0
@@ -1010,6 +1191,7 @@ GameObject:
   - component: {fileID: 5471031277307649980}
   - component: {fileID: 3766214007410989189}
   - component: {fileID: 7160077164295423449}
+  - component: {fileID: 10864363694999603}
   m_Layer: 0
   m_Name: Carpenting_room_Random_furniture_Stool3
   m_TagString: Untagged
@@ -1078,6 +1260,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &10864363694999603
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7239062762115027706}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8873115610088064377, guid: 1f1b98e03401ea8429c3b1827903d363, type: 3}
 --- !u!1 &8031265878803901284
 GameObject:
   m_ObjectHideFlags: 0
@@ -1089,6 +1285,7 @@ GameObject:
   - component: {fileID: 5292620080374478274}
   - component: {fileID: 6658697902638497269}
   - component: {fileID: 1414590760474021225}
+  - component: {fileID: 3053449101300497334}
   m_Layer: 0
   m_Name: Carpenting_room_Stool_Random_furniture
   m_TagString: Untagged
@@ -1157,6 +1354,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &3053449101300497334
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8031265878803901284}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5016559228764804304, guid: 1f1b98e03401ea8429c3b1827903d363, type: 3}
 --- !u!1 &8042220612224889977
 GameObject:
   m_ObjectHideFlags: 0
@@ -1326,6 +1537,7 @@ GameObject:
   - component: {fileID: 569738678277683695}
   - component: {fileID: 630952698362115704}
   - component: {fileID: 5020630587677779461}
+  - component: {fileID: 2732291523770133108}
   m_Layer: 0
   m_Name: Carpenting_room_Random_furniture_Stool2
   m_TagString: Untagged
@@ -1394,6 +1606,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &2732291523770133108
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8524828663581662475}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6585980172517076178, guid: 1f1b98e03401ea8429c3b1827903d363, type: 3}
 --- !u!1 &8535227747797488757
 GameObject:
   m_ObjectHideFlags: 0
@@ -1484,7 +1710,8 @@ GameObject:
   - component: {fileID: 21392363131615757}
   - component: {fileID: 2303223153620164588}
   - component: {fileID: 5622320219839642194}
-  m_Layer: 0
+  - component: {fileID: 6315358222415839759}
+  m_Layer: 11
   m_Name: Kamer1_Carpenting_room_Vloer_id
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1552,6 +1779,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &6315358222415839759
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8912818749107157033}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 13.33749, y: 0.619031, z: 13.337491}
+  m_Center: {x: -0.42291212, y: -0.32488552, z: 0.27811146}
 --- !u!1 &8918335460284460320
 GameObject:
   m_ObjectHideFlags: 0
@@ -1642,6 +1882,7 @@ GameObject:
   - component: {fileID: 8846745673825686117}
   - component: {fileID: 1475236486432619595}
   - component: {fileID: 7448853161160762823}
+  - component: {fileID: 4826309403563794754}
   m_Layer: 0
   m_Name: Carpenting_room_Workbench_Clamp_2
   m_TagString: Untagged
@@ -1710,3 +1951,117 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4826309403563794754
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9121909966616304486}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -4262674325181703549, guid: 1f1b98e03401ea8429c3b1827903d363, type: 3}
+--- !u!1001 &6325295519452244247
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2596409362654955226}
+    m_Modifications:
+    - target: {fileID: 5172732999800187868, guid: 24222f9edbc5f5d42b0b1121109b50ef,
+        type: 3}
+      propertyPath: _fromObjectiveRoom
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5172732999800187868, guid: 24222f9edbc5f5d42b0b1121109b50ef,
+        type: 3}
+      propertyPath: _spawnpoint
+      value: 
+      objectReference: {fileID: 4295109342124554191}
+    - target: {fileID: 5801408250555168436, guid: 24222f9edbc5f5d42b0b1121109b50ef,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.101
+      objectReference: {fileID: 0}
+    - target: {fileID: 5801408250555168436, guid: 24222f9edbc5f5d42b0b1121109b50ef,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 5801408250555168436, guid: 24222f9edbc5f5d42b0b1121109b50ef,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.714
+      objectReference: {fileID: 0}
+    - target: {fileID: 5801408250555168436, guid: 24222f9edbc5f5d42b0b1121109b50ef,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5801408250555168436, guid: 24222f9edbc5f5d42b0b1121109b50ef,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5801408250555168436, guid: 24222f9edbc5f5d42b0b1121109b50ef,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5801408250555168436, guid: 24222f9edbc5f5d42b0b1121109b50ef,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5801408250555168436, guid: 24222f9edbc5f5d42b0b1121109b50ef,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 5801408250555168436, guid: 24222f9edbc5f5d42b0b1121109b50ef,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5801408250555168436, guid: 24222f9edbc5f5d42b0b1121109b50ef,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5801408250555168436, guid: 24222f9edbc5f5d42b0b1121109b50ef,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5801408250555168436, guid: 24222f9edbc5f5d42b0b1121109b50ef,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 5801408250555168436, guid: 24222f9edbc5f5d42b0b1121109b50ef,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 5801408250555168436, guid: 24222f9edbc5f5d42b0b1121109b50ef,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058683149991938158, guid: 24222f9edbc5f5d42b0b1121109b50ef,
+        type: 3}
+      propertyPath: m_Name
+      value: Wooden Door
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 24222f9edbc5f5d42b0b1121109b50ef, type: 3}
+--- !u!4 &523904998624354211 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5801408250555168436, guid: 24222f9edbc5f5d42b0b1121109b50ef,
+    type: 3}
+  m_PrefabInstance: {fileID: 6325295519452244247}
+  m_PrefabAsset: {fileID: 0}
