@@ -6,6 +6,7 @@ public class Constants
 {
     public const string _navMeshComponents = "NavMeshComponents";
     public const string _player = "Player";
+    public const string _mainPlayer = "Main Player";
     public const string _managersTag = "Managers";
 
     #region Save & Load System

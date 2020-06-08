@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Camera),typeof(Rigidbody))]
+[RequireComponent(typeof(Camera), typeof(Rigidbody))]
 public class CameraController : MonoBehaviour
 {
     [SerializeField] private Transform _objectToFollow; //This is the object the camera will stick to
@@ -35,13 +35,20 @@ public class CameraController : MonoBehaviour
 
     private void Update() {
         //Sets the Camera's position to the position of the object it follows
-        if(_objectToFollow)
+        if (_objectToFollow)
             transform.position = _objectToFollow.position + new Vector3(0, _heightFromObject, _distanceFromObject);
     }
 
     private void FixedUpdate() {
-        if (_lookDirection == Vector2.zero || !_objectToFollow) return;
+        if (_lookDirection != Vector2.zero) RotatePlayer();
 
+        if (_objectToFollow) {
+            //Updates the rotation of the object the camera is following depending on the mouse position of the player
+            _objectToFollow.GetComponent<Rigidbody>().MoveRotation(Quaternion.Euler(new Vector3(0, _rb.rotation.eulerAngles.y, 0)));
+        }
+    }
+
+    private void RotatePlayer() {
         //Clamps the camera's y axis
         Vector3 mousePosition = new Vector3(_lookDirection.y, _lookDirection.x, 0) * _rotationSpeed * Time.deltaTime;
 
@@ -50,8 +57,5 @@ public class CameraController : MonoBehaviour
 
         //Rotates the camera to the position of the mouse
         _rb.MoveRotation(Quaternion.Euler(_xRotation, transform.eulerAngles.y + mousePosition.y, 0f));
-
-        //Updates the rotation of the object the camera is following depending on the mouse position of the player
-        _objectToFollow.GetComponent<Rigidbody>().MoveRotation(Quaternion.Euler(new Vector3(0, _rb.rotation.eulerAngles.y, 0)));
     }
 }

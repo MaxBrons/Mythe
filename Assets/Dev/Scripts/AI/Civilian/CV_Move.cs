@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class CV_Move : CV_State
 {
-    public override void Start() {
-        base.Start();
-        _eventHandler.OnPlayerMakingNoice += MoveTowardsNoice; 
-    }
+    private void OnEnable() => _eventHandler.OnPlayerMakingNoice += MoveTowardsNoice;
+    private void OnDisable() => _eventHandler.OnPlayerMakingNoice -= MoveTowardsNoice;
+    public override void Awake() => base.Awake();
 
     //Gets called when the state is set to active state
     public override void StartState() {

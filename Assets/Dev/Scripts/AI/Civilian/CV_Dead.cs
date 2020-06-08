@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class CV_Dead : CV_State
 {
-    public override void Start() => base.Start();
+    public override void Awake() => base.Awake();
     public override void StartState() {
-        base.StartState();
         _eventHandler.OnPlayerMakingNoice -= GetComponent<CV_Move>().MoveTowardsNoice;
         Debug.Log(transform.name + " died");
         Destroy(gameObject);

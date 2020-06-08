@@ -9,6 +9,7 @@ using UnityEngine.InputSystem;
 public class PlayerAttack : MonoBehaviour
 {
     [SerializeField] private Weapon _equipedWeapon;
+    [SerializeField] private GameObject _enemyHitSound;
     private InputMaster _inputMaster;
     private Animator _animator;
     private bool _animationIsRunning = false;
@@ -46,6 +47,9 @@ public class PlayerAttack : MonoBehaviour
         if(Physics.Raycast(transform.parent.position,transform.parent.forward,out hit, _equipedWeapon.GetWeaponRange(), 1 << 10)) {
             //Damages the Civilian that the ray hits
             hit.transform.GetComponent<CV_Health>().TakeDamage(_equipedWeapon.GetWeaponDamage());
+
+            //Spawn the hit sound
+            Instantiate(_enemyHitSound, hit.transform.position, Quaternion.identity);
         }
     }
 

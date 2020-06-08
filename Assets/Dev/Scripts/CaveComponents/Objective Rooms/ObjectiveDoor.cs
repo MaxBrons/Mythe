@@ -11,7 +11,7 @@ public class ObjectiveDoor : MonoBehaviour
     private int rand = 0;
 
     private void Start() {
-        if (!_fromObjectiveRoom) rand = Random.Range(0, 2);
+        if (!_fromObjectiveRoom) rand = Random.Range(0, 3);
     }
     private void OnMouseDown() {
         if (_fromObjectiveRoom) {
