@@ -23,7 +23,7 @@ public class CaveSectionSpawnpoint : MonoBehaviour
     private void Start() {
         //Gets a random Cave Section to spawn
         rand = Random.Range(0, CaveSectionTemplate.Instance.GetSpawnableSections().Count); //Sets a random int for the next random cave section to spawn
-        Invoke(Constants._spawnFunctionName, 0.5f); //Invokes the method, so that the collision has time to check propperly
+        Invoke(Constants._spawnFunctionName, Constants._caveSpawnTime); //Invokes the method, so that the collision has time to check propperly
         Destroy(gameObject, 30f);
     }
     private void Spawn() {

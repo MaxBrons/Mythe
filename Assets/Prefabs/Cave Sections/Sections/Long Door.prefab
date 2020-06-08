@@ -17,7 +17,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 115
   m_IsActive: 1
 --- !u!4 &6717577469070310965
 Transform:
@@ -111,7 +111,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 115
   m_IsActive: 1
 --- !u!4 &1636668199283529272
 Transform:
@@ -202,7 +202,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 115
   m_IsActive: 1
 --- !u!4 &2087334227518622388
 Transform:
@@ -242,7 +242,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 115
   m_IsActive: 1
 --- !u!4 &5341566372426113682
 Transform:
@@ -336,7 +336,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 115
   m_IsActive: 1
 --- !u!4 &7618995135322628162
 Transform:
@@ -430,7 +430,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 115
   m_IsActive: 1
 --- !u!4 &228546869920553447
 Transform:
@@ -577,7 +577,7 @@ PrefabInstance:
     - target: {fileID: 3263623663510536189, guid: c0d3ea1cf87952748999bc3bbb1459fb,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 0
+      value: 115
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0d3ea1cf87952748999bc3bbb1459fb, type: 3}
@@ -668,6 +668,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wooden Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058683149991938158, guid: 24222f9edbc5f5d42b0b1121109b50ef,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 115
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24222f9edbc5f5d42b0b1121109b50ef, type: 3}

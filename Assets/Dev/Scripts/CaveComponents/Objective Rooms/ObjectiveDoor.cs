@@ -6,8 +6,10 @@ using UnityEngine.SceneManagement;
 public class ObjectiveDoor : MonoBehaviour
 {
     public static int roomToSpawn;
+    public static Vector3 lastPosition;
 
     [SerializeField] private bool _fromObjectiveRoom;
+    [SerializeField] private bool _fromStartToMainScene = false;
     private int rand = 0;
 
     private void Start() {
@@ -15,10 +17,13 @@ public class ObjectiveDoor : MonoBehaviour
     }
     private void OnMouseDown() {
         if (_fromObjectiveRoom) {
-            SceneManager.LoadSceneAsync(1);
+            LevelLoader.Instance.LoadLevel(1);
+            GameManager.Instance.SpawnPlayerAtSpawnpoint(new Vector3(0, 13, 28));
+            //else GameManager.Instance.SpawnPlayerAtSpawnpoint(lastPosition);
             return;
         }
+        //lastPosition = transform.position + new Vector3(0, 3, -1);
         roomToSpawn = rand;
-        SceneManager.LoadSceneAsync(2);
+        LevelLoader.Instance.LoadLevel(2);
     }
 }
