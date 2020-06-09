@@ -229,6 +229,33 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""UserInterface"",
+            ""id"": ""0a50ee19-e80d-47d7-b48f-8e241db5dddc"",
+            ""actions"": [
+                {
+                    ""name"": ""Esc"",
+                    ""type"": ""Button"",
+                    ""id"": ""4020eb9d-187c-42f5-b1be-93b2ca36b9f5"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""e313373c-b8a5-4e82-9edd-fd7c558659de"",
+                    ""path"": ""<Keyboard>/f1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard and mouse"",
+                    ""action"": ""Esc"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -267,6 +294,9 @@ public class @InputMaster : IInputActionCollection, IDisposable
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Sprint = m_Player.FindAction("Sprint", throwIfNotFound: true);
         m_Player_Attack = m_Player.FindAction("Attack", throwIfNotFound: true);
+        // UserInterface
+        m_UserInterface = asset.FindActionMap("UserInterface", throwIfNotFound: true);
+        m_UserInterface_Esc = m_UserInterface.FindAction("Esc", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -369,6 +399,39 @@ public class @InputMaster : IInputActionCollection, IDisposable
         }
     }
     public PlayerActions @Player => new PlayerActions(this);
+
+    // UserInterface
+    private readonly InputActionMap m_UserInterface;
+    private IUserInterfaceActions m_UserInterfaceActionsCallbackInterface;
+    private readonly InputAction m_UserInterface_Esc;
+    public struct UserInterfaceActions
+    {
+        private @InputMaster m_Wrapper;
+        public UserInterfaceActions(@InputMaster wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Esc => m_Wrapper.m_UserInterface_Esc;
+        public InputActionMap Get() { return m_Wrapper.m_UserInterface; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(UserInterfaceActions set) { return set.Get(); }
+        public void SetCallbacks(IUserInterfaceActions instance)
+        {
+            if (m_Wrapper.m_UserInterfaceActionsCallbackInterface != null)
+            {
+                @Esc.started -= m_Wrapper.m_UserInterfaceActionsCallbackInterface.OnEsc;
+                @Esc.performed -= m_Wrapper.m_UserInterfaceActionsCallbackInterface.OnEsc;
+                @Esc.canceled -= m_Wrapper.m_UserInterfaceActionsCallbackInterface.OnEsc;
+            }
+            m_Wrapper.m_UserInterfaceActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Esc.started += instance.OnEsc;
+                @Esc.performed += instance.OnEsc;
+                @Esc.canceled += instance.OnEsc;
+            }
+        }
+    }
+    public UserInterfaceActions @UserInterface => new UserInterfaceActions(this);
     private int m_KeyboardandmouseSchemeIndex = -1;
     public InputControlScheme KeyboardandmouseScheme
     {
@@ -393,5 +456,9 @@ public class @InputMaster : IInputActionCollection, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnSprint(InputAction.CallbackContext context);
         void OnAttack(InputAction.CallbackContext context);
+    }
+    public interface IUserInterfaceActions
+    {
+        void OnEsc(InputAction.CallbackContext context);
     }
 }

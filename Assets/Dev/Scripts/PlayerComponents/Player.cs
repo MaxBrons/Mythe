@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public static Player Instance;
+    public InputMaster _inputMaster { get; private set; }
 
     private void Awake() {
         //Destroys the object if there are more than 1 of
@@ -14,6 +15,14 @@ public class Player : MonoBehaviour
         }
         Instance = this;
 
+        _inputMaster = new InputMaster();
         DontDestroyOnLoad(gameObject);
+    }
+
+    public void ChangeUserInput(bool value) {
+        if (value) {
+            _inputMaster.Player.Disable();
+        }
+        else _inputMaster.Player.Enable();
     }
 }

@@ -53,7 +53,7 @@ public class CV_Attack : CV_State
         //Play attack animation
 
         _attackAnimationRunning = true;
-        yield return new WaitForSecondsRealtime(.5f);
+        yield return new WaitForSeconds(.5f);
 
         if(_civilian.GetTarget())
             _civilian.GetTarget().GetComponent<PlayerHealth>().Damage(_civilian.GetAttackDamage());

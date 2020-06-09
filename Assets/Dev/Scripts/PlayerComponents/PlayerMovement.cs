@@ -13,21 +13,15 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody _rb;
     private Vector2 _moveDirection = new Vector2();
 
-    private void OnEnable() {
-        //Enables the input scheme and then sets the values of the input to the corresponding stored variables
+    private void Start() {
+        _inputMaster = Player.Instance._inputMaster;
+        _rb = GetComponent<Rigidbody>();
+
+        //Sets the values of the input to the corresponding stored variables
         _inputMaster.Player.Move.Enable();
         _inputMaster.Player.Sprint.Enable();
         _inputMaster.Player.Move.performed += ctx => _moveDirection = ctx.ReadValue<Vector2>();
         _inputMaster.Player.Sprint.performed += ctx => _isSprinting = ctx.ReadValueAsButton();
-    }
-    private void OnDisable() {
-        //Disables the input scheme
-        _inputMaster.Player.Move.Disable();
-        _inputMaster.Player.Sprint.Disable();
-    }
-    private void Awake() {
-        _inputMaster = new InputMaster();
-        _rb = GetComponent<Rigidbody>();
     }
 
     private void FixedUpdate() {

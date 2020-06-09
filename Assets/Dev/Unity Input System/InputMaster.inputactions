@@ -216,6 +216,33 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "UserInterface",
+            "id": "0a50ee19-e80d-47d7-b48f-8e241db5dddc",
+            "actions": [
+                {
+                    "name": "Esc",
+                    "type": "Button",
+                    "id": "4020eb9d-187c-42f5-b1be-93b2ca36b9f5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "e313373c-b8a5-4e82-9edd-fd7c558659de",
+                    "path": "<Keyboard>/f1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard and mouse",
+                    "action": "Esc",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [
