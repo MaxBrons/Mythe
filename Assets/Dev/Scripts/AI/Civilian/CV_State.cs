@@ -19,7 +19,7 @@ public abstract class CV_State : MonoBehaviour
         _civilian = GetComponent<Civilian>();
         _stateMachine = GetComponent<CV_StateMachine>();
         _eventHandler = EventHandler.Instance;
-        //_animator = GetComponent<Animator>();
+        _animator = GetComponent<Animator>();
     }
 
     //This is called when state is set as active state
