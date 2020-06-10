@@ -6,18 +6,13 @@ public class CV_Dead : CV_State
 {
     public override void Awake() => base.Awake();
     public override void StartState() {
-        _eventHandler.OnPlayerMakingNoice -= GetComponent<CV_Move>().MoveTowardsNoice;
-        Debug.Log(transform.name + " died");
-        Destroy(gameObject);
+        //Activate the ragdoll and destroy the civilian after an amount of time
+        _civilian.TogglePelvisRigidBodies(false);
+        Destroy(_civilian.GetCivilianBodyPelvis().gameObject, 10f);
+        Destroy(gameObject, 10f);
     }
 
-    public override void StopState() {
-        base.StopState();
-    }
-
-    public override void PerformState() {
-        //Player animation
-    }
-    public override void RequestToStopState() {
-    }
+    public override void StopState() { }
+    public override void PerformState() { }
+    public override void RequestToStopState() { }
 }

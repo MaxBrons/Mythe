@@ -7,7 +7,7 @@ public class Weapon : MonoBehaviour
     /// <summary>
     /// Stores the variables of the weapon and has corresponding Getters
     /// </summary>
-    
+
     [SerializeField] private float _damage = 1;
     [SerializeField] private float _range = 1;
 

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class Constants
 {
@@ -28,6 +29,9 @@ public class Constants
     #endregion
 
     #region Animation State Names
+    public const string _CV_Move_Bool = "Move";
+    public const string _CV_Run_Bool = "Run";
+    public const string _CV_Attack_Bool = "Attack";
     #endregion
 
 }

@@ -12,7 +12,9 @@ public class LevelLoader : MonoBehaviour
     [SerializeField] private Text _loadingPercentageText;
 
 
-    private void Awake() => Instance = this;
+    private void Awake() {
+        if (!Instance) Instance = this;
+    }
 
     public void LoadLevel(int index) {
         StartCoroutine(LoadSceneAsync(index));

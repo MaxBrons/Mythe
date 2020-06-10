@@ -49,7 +49,8 @@ public class PlayerAttack : MonoBehaviour
             hit.transform.GetComponent<CV_Health>().TakeDamage(_equipedWeapon.GetWeaponDamage());
 
             //Spawn the hit sound
-            Instantiate(_enemyHitSound, hit.transform.position, Quaternion.identity);
+            GameObject sound = Instantiate(_enemyHitSound, hit.transform.position, Quaternion.identity);
+            Destroy(sound, 3f);
         }
     }
 

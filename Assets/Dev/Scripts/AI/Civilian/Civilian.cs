@@ -16,10 +16,25 @@ public class Civilian : MonoBehaviour
     [SerializeField] private float _sightRange = 10;
     [SerializeField] private float _hearingRange = 30;
     [SerializeField] private GameObject _target = null;
+    [SerializeField] private Transform _civilianBodyPelvis;
     private void Awake() {
         _navAgent = _navAgent ? _navAgent : GetComponent<NavMeshAgent>();
         _navAgent.stoppingDistance = _attackRange - 0.5f;
         _navAgent.speed = _movementSpeed;
+        TogglePelvisRigidBodies(true);
+    }
+
+    public void TogglePelvisRigidBodies(bool kinematic) {
+        if (!kinematic) DisableCivilian();
+        _civilianBodyPelvis.transform.parent = !kinematic ? null : transform;
+        _civilianBodyPelvis.gameObject.SetActive(!kinematic);
+    }
+
+    private void DisableCivilian() {
+        //Disable all components that
+        foreach(Behaviour i in gameObject.GetComponents<Behaviour>())
+            i.enabled = false;
+        GetComponent<CapsuleCollider>().enabled = false;
     }
 
     #region Getters & Setters
@@ -30,8 +45,9 @@ public class Civilian : MonoBehaviour
     public float GetHearingRange() { return _hearingRange; }
     public NavMeshAgent GetNavMeshAgent() { return _navAgent; }
     public GameObject GetTarget() { return _target; }
-
+    public Transform GetCivilianBodyPelvis() { return _civilianBodyPelvis; }
     public void SetMovementSpeed(float value) => _navAgent.speed = value;
     public void SetTarget(GameObject target) => _target = target;
+    public void SetCivilianDestination(Vector3 destination) => _navAgent.SetDestination(destination);
     #endregion
 }

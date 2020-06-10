@@ -1,56 +1,45 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
 [RequireComponent(typeof(AudioSource))]
 public class Sound : MonoBehaviour
 {
-    private enum SoundType
-    {
-        Background, Ambient, Once
-    }
     [SerializeField] private AudioClip _clip;
-    [SerializeField] private SoundType _soundType;
+    [SerializeField] private bool _loop = false;
+    [SerializeField] private bool _random = false;
     [SerializeField] private float _waitForNextSound = 120;
     private AudioSource _source;
     private void OnDestroy() => SoundManager.Instance.OnGlobalVolumeChange -= UpdateVolume;
     private void Start() {
+        //Set the start values of the Audio Source
         _source = GetComponent<AudioSource>();
+        _source.volume = Settings._globalVolume;
+
+        //Function is called when the player updates the sound settings
         SoundManager.Instance.OnGlobalVolumeChange += UpdateVolume;
 
-        if (_soundType == SoundType.Background) StartCoroutine(PlayRandomRepeatingSound());
-        else if (_soundType == SoundType.Ambient) StartCoroutine(PlayRepeatingSound());
-        else if (_soundType == SoundType.Once) PlayOnce();
+        //Plays the audio according to the set variables
+        StartCoroutine(Play(_loop, _waitForNextSound, _random));
     }
 
-    private void PlayOnce() {
-        _source.loop = false;
-        _source.clip = _clip;
-        _source.Play();
-    }
-
-    private IEnumerator PlayRepeatingSound() {
+    private IEnumerator Play(bool loop, float seconds = 0, bool random = false) {
+        //Plays the audio once, repeatedly with a delay or repeatedly
         while (true) {
-            _source.clip = _clip;
-            _source.Play();
-            yield return new WaitForSeconds(_waitForNextSound);
+            if (!loop) break; //Breaks the loop if the clip is not supposed to loop
+
+            _source.clip = random ? GetRandomAudioClip() : _clip; //Sets the clip
+            _source.Play(); //Plays the clip
+            yield return new WaitUntil(() => !_source.isPlaying); //waits until the clip is done playing
+            yield return new WaitForSeconds(seconds); //Waits for a set amount of seconds
         }
     }
 
-    private IEnumerator PlayRandomRepeatingSound() {
-        if (!_clip) SetRandomAudioClip();
-        while (true) {
-            _source.clip = _clip;
-            _source.Play();
-            yield return new WaitUntil(() => !_source.isPlaying);
-            SetRandomAudioClip();
-        }
-    }
-
-    private void SetRandomAudioClip() {
+    private AudioClip GetRandomAudioClip() {
+        //Returns a random audio clip
         AudioClip[] audioclips = GetComponent<SoundTemplate>().GetSoundClip();
         _clip = audioclips[Random.Range(0, audioclips.Length)];
+        return _clip;
     }
 
     #region Getters & Setters
