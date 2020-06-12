@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 [RequireComponent(typeof(AudioSource))]
@@ -26,7 +27,7 @@ public class Sound : MonoBehaviour
     private IEnumerator Play(bool loop, float seconds = 0, bool random = false) {
         //Plays the audio once, repeatedly with a delay or repeatedly
         while (true) {
-            if (!loop) break; //Breaks the loop if the clip is not supposed to loop
+            if (!loop || !_source.enabled) break; //Breaks the loop if the clip is not supposed to loop
 
             _source.clip = random ? GetRandomAudioClip() : _clip; //Sets the clip
             _source.Play(); //Plays the clip

@@ -9,6 +9,7 @@ public class CaveSectionTemplate : MonoBehaviour
     /// </summary>
 
     [SerializeField] private List<GameObject> _caveSections;
+    [SerializeField] private List<GameObject> _caveSectionTypes;
     [SerializeField] private GameObject _intersection;
 
     public static CaveSectionTemplate Instance;
@@ -19,6 +20,9 @@ public class CaveSectionTemplate : MonoBehaviour
     #region Getters & Setters
     public List<GameObject> GetSpawnableSections() {
         return _caveSections;
+    }
+    public List<GameObject> GetCaveSectionsTypes() {
+        return _caveSectionTypes;
     }
     public GameObject GetIntersection() {
         return _intersection;

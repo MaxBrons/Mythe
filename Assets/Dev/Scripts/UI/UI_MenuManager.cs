@@ -20,7 +20,7 @@ public class UI_MenuManager : MonoBehaviour
         SwitchCursorVisible();
     }
     private void OnApplicationFocus(bool focus) {
-        if(!focus) OnEscPressed();
+        if(!focus && !_menuOpened) OnEscPressed();
     }
 
     private void OnEscPressed() {
@@ -44,7 +44,7 @@ public class UI_MenuManager : MonoBehaviour
 
     private void SwitchCursorVisible() {
         //Turns off/ on the lock on the cursor and makes it visible/invisible
-        Cursor.lockState = Cursor.lockState == 0 ? CursorLockMode.Locked : CursorLockMode.Confined;
+        Cursor.lockState = Cursor.lockState == CursorLockMode.Locked ? CursorLockMode.None : CursorLockMode.Locked;
         Cursor.visible = !Cursor.visible;
     }
 

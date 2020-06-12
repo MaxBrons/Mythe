@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -11,10 +12,7 @@ public class LevelLoader : MonoBehaviour
     [SerializeField] private Slider _loadingPercentageBar;
     [SerializeField] private Text _loadingPercentageText;
 
-
-    private void Awake() {
-        if (!Instance) Instance = this;
-    }
+    private void Awake() => Instance = Instance ? Instance : this;
 
     public void LoadLevel(int index) {
         StartCoroutine(LoadSceneAsync(index));

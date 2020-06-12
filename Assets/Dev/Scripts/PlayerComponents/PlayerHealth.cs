@@ -11,10 +11,9 @@ public class PlayerHealth : MonoBehaviour
         _eventHandler = EventHandler.Instance;
     }
     public void Damage(float amount) {
-        //(3f - (_health * (_health / 10000)))/10;  for vignette effect
         if (_health <= 0) {
             SpawnBag();
-            LevelLoader.Instance.LoadLevel(0);
+            LevelLoader.Instance.LoadLevel(2);
             return;
         }
         _eventHandler.DamagePlayer();
@@ -24,9 +23,11 @@ public class PlayerHealth : MonoBehaviour
 
     private void SpawnBag()
     {
-        Inventory inv = GameObject.FindGameObjectWithTag(Constants._mainPlayer).GetComponent<Inventory>();
+        Inventory inv = GetComponent<Inventory>();
         _bag.GetComponent<Inventory>().Equals(inv);
         Instantiate(_bag, transform.position, Quaternion.identity);
         inv.Clear();
     }
+
+    public float GetHealth() { return _health; }
 }

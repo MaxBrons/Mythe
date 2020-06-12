@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Main Scenes/Main Menu.unity
+    guid: fc3964bd70fa0684fa4a403a644acafc
+  - enabled: 1
+    path: Assets/Scenes/Main Scenes/CaveCreater.unity
+    guid: 2cd9045be2bdda642b62a0401e846a17
+  - enabled: 1
     path: Assets/Scenes/Main Scenes/Starting Room.unity
     guid: 1a395cc5ba50ba547a4e12e2a1ee242e
   - enabled: 1

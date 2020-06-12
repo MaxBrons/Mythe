@@ -16,7 +16,7 @@ public class CV_Move : CV_State
     public override void StartState() {
         base.StartState();
         _civilian.SetMovementSpeed(3.5f); //Sets the movement speed of the NavMeshAgent
-        _animator.SetBool(Constants._CV_Move_Bool, true);
+        _animator.SetBool(Constants._Move_Bool, true);
 
         if (!_civilian.GetTarget()) return;
         _civilian.SetCivilianDestination(_civilian.GetTarget().transform.position);
@@ -26,7 +26,7 @@ public class CV_Move : CV_State
     //Gets called when you break out of the state by switching to an other state
     public override void StopState() {
         base.StopState();
-        _animator.SetBool(Constants._CV_Move_Bool, false);
+        _animator.SetBool(Constants._Move_Bool, false);
     }
 
     //This is where the funtionality of the state is performed

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2264323287517547126}
   - component: {fileID: 2264323287517547127}
+  - component: {fileID: 138205349846305024}
   m_Layer: 0
   m_Name: Cave Sections
   m_TagString: CaveSections
@@ -54,8 +55,28 @@ MonoBehaviour:
   - {fileID: 243056175332313691, guid: a153b62da6c9e6146ad714d1fd467733, type: 3}
   - {fileID: 5050504002514686146, guid: 5794a84f276325e41a5c744ae87b0e2f, type: 3}
   - {fileID: 243056175332313691, guid: a153b62da6c9e6146ad714d1fd467733, type: 3}
+  _caveSectionTypes:
+  - {fileID: 446774456379309158, guid: 80680a9529ee0ea408cb1c2113053423, type: 3}
+  - {fileID: 3075090701606058151, guid: d2cdca45780bdb249b4bd1af61675df0, type: 3}
+  - {fileID: 2482109556940398628, guid: 689f012aaed3fe84685d696c9dfd059f, type: 3}
+  - {fileID: 5217679365016401412, guid: 86dac55c732a27a478621b370e605639, type: 3}
+  - {fileID: 5050504002514686146, guid: 3800eca5eb15b9849af0b6cc0eee73bc, type: 3}
+  - {fileID: 243056175332313691, guid: b23e3aa2f9eb943438e1d474a19cd03b, type: 3}
+  - {fileID: 3275675767303133058, guid: a6ce4551d3a15e144ab98856a3dfd507, type: 3}
   _intersection: {fileID: 3275675767303133058, guid: 9797ae5ed0494fb439e39992fb44d5a2,
     type: 3}
+--- !u!114 &138205349846305024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2264323287517547120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eb010af6a7e2e94da8ef3282fbc6925, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1904080318674004756
 PrefabInstance:
   m_ObjectHideFlags: 0

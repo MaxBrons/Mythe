@@ -24,7 +24,7 @@ public class CaveSectionSpawnpoint : MonoBehaviour
         //Gets a random Cave Section to spawn
         rand = Random.Range(0, CaveSectionTemplate.Instance.GetSpawnableSections().Count); //Sets a random int for the next random cave section to spawn
         Invoke(Constants._spawnFunctionName, Constants._caveSpawnTime); //Invokes the method, so that the collision has time to check propperly
-        Destroy(gameObject, 30f);
+        Destroy(gameObject, 10f);
     }
     private void Spawn() {
         //Instantiates the random cave section
@@ -33,9 +33,8 @@ public class CaveSectionSpawnpoint : MonoBehaviour
         _spawned = true;
     }
     private GameObject GetSection() {
-        //Return a random Cave Section
-        if (_dependecySection) return _dependecySection; //Returns the section the spawnpoint is depending on
-        else return CaveSectionTemplate.Instance.GetSpawnableSections()[Random.Range(0, rand)]; //Returns a random cave section
+        //Return a random Cave Section or the dependecy section
+        return _dependecySection ? _dependecySection : CaveSectionTemplate.Instance.GetSpawnableSections()[Random.Range(0, rand)];
     }
     private void OnTriggerEnter(Collider other) {
         //Don't check for collision if not colliding with a Spawnpoint or if this spawnpoint has already spawned a cave section
@@ -44,9 +43,8 @@ public class CaveSectionSpawnpoint : MonoBehaviour
             //Spawn an Intersection if it collides with an already spawned cave section
             Instantiate(CaveSectionTemplate.Instance.GetIntersection(), transform.position, Quaternion.identity, CaveSectionTemplate.Instance.transform);
             GameObject.FindGameObjectWithTag(Constants._navMeshComponents).GetComponent<NavMeshSurface>().BuildNavMesh();
+            Destroy(gameObject);
         }
-
-        Destroy(gameObject);
         _spawned = true;
     }
 }

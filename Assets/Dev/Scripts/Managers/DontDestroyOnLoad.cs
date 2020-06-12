@@ -4,7 +4,7 @@ public class DontDestroyOnLoad : MonoBehaviour
 {
     public static DontDestroyOnLoad Instance;
     private void Awake() {
-        if (!Instance) Instance = this;
+        Instance = Instance ? Instance : this;
         if (Instance != this) Destroy(gameObject);
 
         DontDestroyOnLoad(gameObject);
