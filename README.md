@@ -23,8 +23,8 @@ In de naschokken van de zwarte dood, ben jij uitgekozen om de laatste delen te v
 | Online Product backlog & Sprint backlog + DoD (Trello)    | [Backlog]
 | Sprint retrospective verslagen (pdf)                      | [RetrospectiveVerslagen]
 | Logboek (pdf)                                             | [Logboek]
-| Opnames sprint retrospectives (Teams opnames)             | [Folder op teams]
-| Opnames standups (Teams opnames)                          | [Folder op teams]
+| Opnames sprint retrospectives (Teams opnames)             | [Folder op teams Retrospectives]
+| Opnames standups (Teams opnames)                          | [Folder op teams Standups]
 |<img width=500/>|<img width=300/>|
    
 #### Producten Werkproces 3
@@ -43,6 +43,7 @@ In de naschokken van de zwarte dood, ben jij uitgekozen om de laatste delen te v
    [RetrospectiveVerslagen]: <https://drive.google.com/drive/folders/1TSEAm7DS7metiLHa4W2b-_70l-WgJAnq?usp=sharing>
    [ReviewVerslagen]: <https://github.com/BerendWeij/agp_inlever_template/blob/master/producten/ReviewVerslagen.pdf>
    [Prototype]: <https://drive.google.com/drive/folders/11-ybn4lEs43QTgSnzpt8zt6P41ff1Nul?usp=sharing>
-   [Folder op teams]: <https://teams.microsoft.com/_#/school/files/Team%2003?threadId=19%3A6ed777786fd54bf8989d00c88233ba2c%40thread.tacv2&ctx=channel&context=Team%252003&rootfolder=%252Fteams%252FMytheGDGA1920-Team03%252FGedeelde%2520documenten%252FTeam%252003>
+   [Folder op teams Retrospectives]: <https://teams.microsoft.com/_#/school/files/Team%2003?threadId=19%3A6ed777786fd54bf8989d00c88233ba2c%40thread.tacv2&ctx=channel&context=Sprint%2520Retrospecives&rootfolder=%252Fteams%252FMytheGDGA1920-Team03%252FGedeelde%2520documenten%252FTeam%252003%252FSprint%2520Retrospecives>
+   [Folder op teams Standups]: <https://teams.microsoft.com/_#/school/files/Team%2003?threadId=19%3A6ed777786fd54bf8989d00c88233ba2c%40thread.tacv2&ctx=channel&context=Standups&rootfolder=%252Fteams%252FMytheGDGA1920-Team03%252FGedeelde%2520documenten%252FTeam%252003%252FStandups>
    [AssetPlanning]: <www.google.com>
    
