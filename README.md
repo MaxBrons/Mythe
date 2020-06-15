@@ -41,7 +41,7 @@ In de naschokken van de zwarte dood, ben jij uitgekozen om de laatste delen te v
    [Logboek]: <https://docs.google.com/spreadsheets/d/1MGBmHO2QhENo406wxVqr_DyFnGyJyDaAOgBmiqLaSPk/edit?usp=sharing>
    [GameDesignDoc]: <www.google.com>
    [RetrospectiveVerslagen]: <https://drive.google.com/drive/folders/1TSEAm7DS7metiLHa4W2b-_70l-WgJAnq?usp=sharing>
-   [ReviewVerslagen]: <https://github.com/BerendWeij/agp_inlever_template/blob/master/producten/ReviewVerslagen.pdf>
+   [ReviewVerslagen]: <https://drive.google.com/drive/folders/1vsTzQdsdWyB8TtQAUgqdVuAVBv1k8aN-?usp=sharing>
    [Prototype]: <https://drive.google.com/drive/folders/11-ybn4lEs43QTgSnzpt8zt6P41ff1Nul?usp=sharing>
    [Folder op teams Retrospectives]: <https://teams.microsoft.com/_#/school/files/Team%2003?threadId=19%3A6ed777786fd54bf8989d00c88233ba2c%40thread.tacv2&ctx=channel&context=Sprint%2520Retrospecives&rootfolder=%252Fteams%252FMytheGDGA1920-Team03%252FGedeelde%2520documenten%252FTeam%252003%252FSprint%2520Retrospecives>
    [Folder op teams Standups]: <https://teams.microsoft.com/_#/school/files/Team%2003?threadId=19%3A6ed777786fd54bf8989d00c88233ba2c%40thread.tacv2&ctx=channel&context=Standups&rootfolder=%252Fteams%252FMytheGDGA1920-Team03%252FGedeelde%2520documenten%252FTeam%252003%252FStandups>
