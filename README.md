@@ -1,4 +1,4 @@
-## Mary kings close
+## Mary Kings Close
 Project team:
 Temmie Angevare, Daninjo Holband, Nyah Ferguson, Aiden Boelhouwer, Stijn van Honschoten, Max Bronstring
 
