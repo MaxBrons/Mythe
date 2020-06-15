@@ -1,11 +1,12 @@
-## [titel van jullie game]
-Project team:[jullie namen]
+## Mary kings close
+Project team:
+Temmie Angevare, Daninjo Holband, Nyah Ferguson, Aiden Boelhouwer, Stijn van Honschoten, Max Bronstring
 
 Platform:
-[PC]
+PC
 
 ### Korte omschrijving van de game
-...
+In de naschokken van de zwarte dood, ben jij uitgekozen om de laatste delen te verbranden en de pest te eindigen voor altijd. Diep onder de grond in Edinburgh Schotland, liggen nog de lichamen van de mensen die al te ziek waren om nog in de stad te blijven. Het moet een simpele taak zijn, het opruimen van de laatste paar besmette lichamen. maar zodra je het gebouw betreed waar de catacomben aan verbonden zijn, blijken het heel wat meer dan alleen lichamen te zijn die zich verschuilen onder Edinburgh.
 
 ---
 #### Producten Werkproces 1
