@@ -19,7 +19,6 @@ public class CV_Move : CV_State
         _animator.SetBool(Constants._Move_Bool, true);
 
         if (!_civilian.GetTarget()) return;
-        _civilian.SetCivilianDestination(_civilian.GetTarget().transform.position);
         _civilian.SetTarget(null);
     }
 
@@ -37,8 +36,8 @@ public class CV_Move : CV_State
     public override void RequestToStopState() {
         //Let's the civilian follow the last known position of it's target or switch to Idle state
         if (_civilian.GetNavMeshAgent().hasPath) {
-            if (_civilian.GetNavMeshAgent().remainingDistance > _civilian.GetNavMeshAgent().stoppingDistance) return;
-            _stateMachine.SwitchState(0);
+            if (_civilian.GetNavMeshAgent().remainingDistance <= _civilian.GetNavMeshAgent().stoppingDistance)
+                _stateMachine.SwitchState(0);
         }
 
         //Checks if a player is in range

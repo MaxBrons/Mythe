@@ -11,12 +11,6 @@ public class Interaction : MonoBehaviour
     private bool _isActive;
 
     private void Start() => _player = GameObject.FindGameObjectWithTag(Constants._mainPlayer);
-
-    private void FixedUpdate() {
-        //if (!_isActive) return;
-        if (InputSystem.GetDevice<Keyboard>().fKey.wasPressedThisFrame)
-            PressedKey();
-    }
     private void OnMouseEnter() {
         if (!_keyImage || Vector2.Distance(gameObject.transform.position, _player.transform.position) > _inRangeDistance) return;
         _isActive = true;
@@ -26,9 +20,5 @@ public class Interaction : MonoBehaviour
         if (!_keyImage || !_keyImage.activeSelf) return;
         _isActive = false;
         _keyImage.SetActive(false);
-    }
-
-    private void PressedKey() {
-        GetComponent<ObjectiveDoor>().OpenDoor();
     }
 }

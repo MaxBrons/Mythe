@@ -17,6 +17,7 @@ public class Civilian : MonoBehaviour
     [SerializeField] private float _hearingRange = 30;
     [SerializeField] private GameObject _target = null;
     [SerializeField] private Transform _civilianBodyPelvis;
+    private bool dead = false;
     private void Awake() {
         _navAgent = _navAgent ? _navAgent : GetComponent<NavMeshAgent>();
         _navAgent.stoppingDistance = _attackRange - 0.5f;
@@ -32,7 +33,7 @@ public class Civilian : MonoBehaviour
 
     private void DisableCivilian() {
         //Disable all components that
-        foreach(Behaviour i in gameObject.GetComponents<Behaviour>())
+        foreach (Behaviour i in gameObject.GetComponents<Behaviour>())
             i.enabled = false;
         GetComponent<CapsuleCollider>().enabled = false;
     }
@@ -46,6 +47,8 @@ public class Civilian : MonoBehaviour
     public NavMeshAgent GetNavMeshAgent() { return _navAgent; }
     public GameObject GetTarget() { return _target; }
     public Transform GetCivilianBodyPelvis() { return _civilianBodyPelvis; }
+    public bool GetDeadState() { return dead; }
+    public void SetDeadState(bool state) => dead = state;
     public void SetMovementSpeed(float value) => _navAgent.speed = value;
     public void SetTarget(GameObject target) => _target = target;
     public void SetCivilianDestination(Vector3 destination) => _navAgent.SetDestination(destination);

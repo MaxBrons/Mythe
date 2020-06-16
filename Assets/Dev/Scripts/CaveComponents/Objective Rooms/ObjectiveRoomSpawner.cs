@@ -7,7 +7,7 @@ public class ObjectiveRoomSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject[] _rooms;
     private void Start() {
-        Instantiate(_rooms[ObjectiveDoor.roomToSpawn]);
+        Instantiate(_rooms[ObjectiveDoor.RoomToSpawn]);
         GameObject.FindGameObjectWithTag(Constants._navMeshComponents).GetComponent<NavMeshSurface>().BuildNavMesh();
     }
 }

@@ -11,6 +11,7 @@ public class CV_Health : MonoBehaviour
     public void TakeDamage(float amount) {
         if(_health <= 0) {
             GetComponent<CV_StateMachine>().SwitchState(3);
+            GetComponent<Civilian>().SetDeadState(true);
             return;
         }
         _health -= amount;

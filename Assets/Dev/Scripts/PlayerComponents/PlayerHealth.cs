@@ -13,6 +13,7 @@ public class PlayerHealth : MonoBehaviour
     public void Damage(float amount) {
         if (_health <= 0) {
             SpawnBag();
+            ResetPlayer();
             LevelLoader.Instance.LoadLevel(2);
             return;
         }
@@ -27,6 +28,11 @@ public class PlayerHealth : MonoBehaviour
         _bag.GetComponent<Inventory>().Equals(inv);
         Instantiate(_bag, transform.position, Quaternion.identity);
         inv.Clear();
+    }
+
+    public void ResetPlayer() {
+        GetComponent<PlayerUI>().ResetVignette();
+        _health = 100;
     }
 
     public float GetHealth() { return _health; }

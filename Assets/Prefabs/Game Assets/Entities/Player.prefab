@@ -2256,7 +2256,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0%
+  m_Text: 5%
 --- !u!1 &5998888435978200330
 GameObject:
   m_ObjectHideFlags: 0
@@ -2649,7 +2649,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0%
+  m_Text: 50%
 --- !u!1 &7992478883919025804
 GameObject:
   m_ObjectHideFlags: 0
@@ -3342,8 +3342,48 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1183860062376176659, guid: 7a7d8414c6ab380469f13b14ec783834,
         type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].time
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183860062376176659, guid: 7a7d8414c6ab380469f13b14ec783834,
+        type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].probability
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2479031500894180851, guid: 7a7d8414c6ab380469f13b14ec783834,
+        type: 3}
+      propertyPath: m_BoundingSphereOverride.x
+      value: 1.1479436e-38
+      objectReference: {fileID: 0}
+    - target: {fileID: 2479031500894180851, guid: 7a7d8414c6ab380469f13b14ec783834,
+        type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2479031500894180851, guid: 7a7d8414c6ab380469f13b14ec783834,
+        type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: -1.2926682e+20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2479031500894180851, guid: 7a7d8414c6ab380469f13b14ec783834,
+        type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 3.52e-42
+      objectReference: {fileID: 0}
+    - target: {fileID: 4284968620619817812, guid: 7a7d8414c6ab380469f13b14ec783834,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4284968620619817812, guid: 7a7d8414c6ab380469f13b14ec783834,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4284968620619817812, guid: 7a7d8414c6ab380469f13b14ec783834,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6661918364980899071, guid: 7a7d8414c6ab380469f13b14ec783834,
         type: 3}
