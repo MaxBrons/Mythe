@@ -17,6 +17,7 @@ TagManager:
   - PlayerSpawnpoint
   - AI Annie
   - PostProcessing
+  - Door
   layers:
   - Default
   - TransparentFX
@@ -31,7 +32,7 @@ TagManager:
   - Civilian
   - WalkableSurface
   - Annie
-  - 
+  - Door
   - 
   - 
   - 

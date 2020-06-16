@@ -1,28 +1,28 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
 
 public class ObjectiveRoom : MonoBehaviour
 {
-    public static ObjectiveRoom Instance;
-
-    public static Vector3 _initSpawnPosition;
-    public ObjectiveDoor LastEnteredDoor { get; set; }
-
     [SerializeField] private Transform _spawnpoint;
-    [SerializeField] private bool _mainSceneRoom = false;
+    [SerializeField] private Transform _fromStartSpawnpoint;
 
-    private void Awake() {
-        Instance = this;
-        if (_mainSceneRoom) {
-            GameManager.Instance.SpawnPlayerAtSpawnpoint(Player.Instance.LastSpawnpointPosition);
-            return;
-        }
-        GameManager.Instance.SpawnPlayerAtSpawnpoint(_spawnpoint.position);
+    private void Start() {
+        if (CheckIfCameFromStart()) return;
+
+        ObjectiveManager.Instance.TryUpdateClearedRooms();
+
+        //Spawn the player at the spawnpoint position
+        if (!_spawnpoint) return;
+        Player.Instance.SetPosition(_spawnpoint.transform.position);
     }
 
-    public void SetObjectiveOnFire() {
-        LastEnteredDoor._isCleared = true;
+    private bool CheckIfCameFromStart() {
+        //Spawn the player at beginning of first level
+        if (ObjectiveManager.Instance._spawnPlayerFromSpawn) {
+            Player.Instance.SetPosition(_fromStartSpawnpoint.transform.position);
+            ObjectiveManager.Instance._spawnPlayerFromSpawn = false;
+            return true;
+        }
+        return false;
     }
 }

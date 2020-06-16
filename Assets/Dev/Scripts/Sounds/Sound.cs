@@ -9,6 +9,7 @@ public class Sound : MonoBehaviour
     [SerializeField] private AudioClip _clip;
     [SerializeField] private bool _loop = false;
     [SerializeField] private bool _random = false;
+    [SerializeField] private bool _civilian = false;
     [SerializeField] private float _waitForNextSound = 120;
     private AudioSource _source;
     private void OnDestroy() => SoundManager.Instance.OnGlobalVolumeChange -= UpdateVolume;
@@ -25,6 +26,9 @@ public class Sound : MonoBehaviour
     }
 
     private IEnumerator Play(bool loop, float seconds = 0, bool random = false) {
+        //Set a random pitch for the civilian caughing sound
+        if(_civilian) _source.pitch = Random.Range(0.75f, 0.95f);
+
         //Plays the audio once, repeatedly with a delay or repeatedly
         while (true) {
             if (!loop || !_source.enabled) break; //Breaks the loop if the clip is not supposed to loop

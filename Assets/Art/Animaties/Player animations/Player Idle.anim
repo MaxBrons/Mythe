@@ -1526,7 +1526,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: mesh/Bowie_knife:Bowie_knife
+    path: mesh/bowieknife
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1632,7 +1632,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: mesh/torch_lowpoly1:Group30773
+    path: mesh/fakkel
   m_CompressedRotationCurves: []
   m_EulerCurves: []
   m_PositionCurves:
@@ -1820,7 +1820,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: mesh/Bowie_knife:Bowie_knife
+    path: mesh/bowieknife
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1899,7 +1899,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: mesh/torch_lowpoly1:Group30773
+    path: mesh/fakkel
   m_ScaleCurves:
   - curve:
       serializedVersion: 2
@@ -2861,14 +2861,14 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 3780015478
+      path: 2544983738
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 662473140
+      path: 3121151076
       attribute: 1
       script: {fileID: 0}
       typeID: 4
@@ -2973,14 +2973,14 @@ AnimationClip:
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3780015478
+      path: 2544983738
       attribute: 2
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 662473140
+      path: 3121151076
       attribute: 2
       script: {fileID: 0}
       typeID: 4
@@ -12941,7 +12941,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: mesh/Bowie_knife:Bowie_knife
+    path: mesh/bowieknife
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -13104,7 +13104,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: mesh/Bowie_knife:Bowie_knife
+    path: mesh/bowieknife
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -13267,7 +13267,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: mesh/Bowie_knife:Bowie_knife
+    path: mesh/bowieknife
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -13385,7 +13385,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalRotation.x
-    path: mesh/Bowie_knife:Bowie_knife
+    path: mesh/bowieknife
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -13503,7 +13503,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalRotation.y
-    path: mesh/Bowie_knife:Bowie_knife
+    path: mesh/bowieknife
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -13621,7 +13621,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalRotation.z
-    path: mesh/Bowie_knife:Bowie_knife
+    path: mesh/bowieknife
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -13739,7 +13739,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalRotation.w
-    path: mesh/Bowie_knife:Bowie_knife
+    path: mesh/bowieknife
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -13821,7 +13821,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: mesh/torch_lowpoly1:Group30773
+    path: mesh/fakkel
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -13903,7 +13903,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: mesh/torch_lowpoly1:Group30773
+    path: mesh/fakkel
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -13985,7 +13985,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: mesh/torch_lowpoly1:Group30773
+    path: mesh/fakkel
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -14094,7 +14094,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalRotation.x
-    path: mesh/torch_lowpoly1:Group30773
+    path: mesh/fakkel
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -14203,7 +14203,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalRotation.y
-    path: mesh/torch_lowpoly1:Group30773
+    path: mesh/fakkel
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -14312,7 +14312,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalRotation.z
-    path: mesh/torch_lowpoly1:Group30773
+    path: mesh/fakkel
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -14421,7 +14421,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalRotation.w
-    path: mesh/torch_lowpoly1:Group30773
+    path: mesh/fakkel
     classID: 4
     script: {fileID: 0}
   m_EulerEditorCurves:
@@ -19082,7 +19082,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAngles.x
-    path: mesh/Bowie_knife:Bowie_knife
+    path: mesh/bowieknife
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -19200,7 +19200,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAngles.y
-    path: mesh/Bowie_knife:Bowie_knife
+    path: mesh/bowieknife
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -19318,7 +19318,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAngles.z
-    path: mesh/Bowie_knife:Bowie_knife
+    path: mesh/bowieknife
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -19427,7 +19427,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAngles.x
-    path: mesh/torch_lowpoly1:Group30773
+    path: mesh/fakkel
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -19536,7 +19536,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAngles.y
-    path: mesh/torch_lowpoly1:Group30773
+    path: mesh/fakkel
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -19645,7 +19645,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAngles.z
-    path: mesh/torch_lowpoly1:Group30773
+    path: mesh/fakkel
     classID: 4
     script: {fileID: 0}
   m_HasGenericRootTransform: 0

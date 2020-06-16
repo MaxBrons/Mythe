@@ -11,7 +11,7 @@ public class CV_Attack : CV_State
     //Gets called when the state is set to active state
     public override void StartState() {
         base.StartState();
-        _civilian.SetMovementSpeed(5); //Sets the movement speed of the NavMeshAgent
+        _civilian.SetMovementSpeed(4); //Sets the movement speed of the NavMeshAgent
         _civilian.GetNavMeshAgent().stoppingDistance = _civilian.GetAttackRange(); //Sets the stopping distance of the NavMeshAgent
         _animator.SetBool(Constants._Run_Bool, true);
     }
@@ -54,7 +54,10 @@ public class CV_Attack : CV_State
         _animator.SetBool(Constants._Attack_Bool, true);
         _attackAnimationRunning = true;
 
+        _civilian.SetMovementSpeed(0);
         yield return new WaitForSeconds(_animator.GetCurrentAnimatorClipInfo(0).Length);
+        _civilian.SetMovementSpeed(5);
+        if (_civilian.GetDeadState()) yield break;
 
         if (_civilian.GetTarget())
             _civilian.GetTarget().GetComponent<PlayerHealth>().Damage(_civilian.GetAttackDamage());

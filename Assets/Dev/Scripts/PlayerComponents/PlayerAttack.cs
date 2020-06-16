@@ -19,15 +19,20 @@ public class PlayerAttack : MonoBehaviour
         //_controller = GetComponent<PlayerAnimationController>();
     }
 
-
-    private void Start() {
+    private void OnEnable() {
         //Enables the input scheme and then sets the values of the input to the corresponding function when performed
         _inputMaster.Player.Attack.Enable();
         _inputMaster.Player.Attack.performed += ctx => StartCoroutine(Attack());
     }
+    private void OnDisable() {
+        //Disables the input scheme
+        _inputMaster.Player.Attack.performed -= ctx => StartCoroutine(Attack());
+        _inputMaster.Player.Attack.Disable();
+    }
+
 
     public IEnumerator Attack() {
-        if (_animationIsRunning) yield return null;
+        if (_animationIsRunning) yield break;
         SwitchAnimationRunningBool();
 
         //_controller.SetBool(Constants._Attack_Bool, true); //Turn on the attack animation

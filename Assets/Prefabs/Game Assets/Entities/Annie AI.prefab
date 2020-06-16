@@ -1765,6 +1765,7 @@ GameObject:
   m_Component:
   - component: {fileID: 601523629176257433}
   - component: {fileID: 4956336851567668560}
+  - component: {fileID: 5071568893270008352}
   - component: {fileID: 5558495561160872094}
   - component: {fileID: 5558495561160872093}
   - component: {fileID: 7121327446845146171}
@@ -1806,8 +1807,22 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!136 &5071568893270008352
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4468225405624191370}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.03
+  m_Height: 0.09993083
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.005034518, z: 0}
 --- !u!95 &5558495561160872094
 Animator:
   serializedVersion: 3

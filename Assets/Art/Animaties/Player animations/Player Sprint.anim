@@ -2226,7 +2226,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: mesh/torch1
+    path: mesh/fakkel
   m_CompressedRotationCurves: []
   m_EulerCurves: []
   m_PositionCurves:
@@ -2592,7 +2592,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: mesh/torch1
+    path: mesh/fakkel
   m_ScaleCurves:
   - curve:
       serializedVersion: 2
@@ -3568,7 +3568,7 @@ AnimationClip:
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3360750396
+      path: 3121151076
       attribute: 1
       script: {fileID: 0}
       typeID: 4
@@ -3701,7 +3701,7 @@ AnimationClip:
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3360750396
+      path: 3121151076
       attribute: 2
       script: {fileID: 0}
       typeID: 4
@@ -17097,7 +17097,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: mesh/torch1
+    path: mesh/fakkel
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -17260,7 +17260,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: mesh/torch1
+    path: mesh/fakkel
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -17423,7 +17423,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: mesh/torch1
+    path: mesh/fakkel
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -17514,7 +17514,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalRotation.x
-    path: mesh/torch1
+    path: mesh/fakkel
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -17605,7 +17605,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalRotation.y
-    path: mesh/torch1
+    path: mesh/fakkel
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -17696,7 +17696,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalRotation.z
-    path: mesh/torch1
+    path: mesh/fakkel
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -17787,7 +17787,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalRotation.w
-    path: mesh/torch1
+    path: mesh/fakkel
     classID: 4
     script: {fileID: 0}
   m_EulerEditorCurves:
@@ -24611,7 +24611,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAngles.x
-    path: mesh/torch1
+    path: mesh/fakkel
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -24702,7 +24702,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAngles.y
-    path: mesh/torch1
+    path: mesh/fakkel
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -24793,7 +24793,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAngles.z
-    path: mesh/torch1
+    path: mesh/fakkel
     classID: 4
     script: {fileID: 0}
   m_HasGenericRootTransform: 0

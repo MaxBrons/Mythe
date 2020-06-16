@@ -2534,6 +2534,7 @@ MonoBehaviour:
   _clip: {fileID: 8300000, guid: 86cc9341fc78870499fce504927c847f, type: 3}
   _loop: 1
   _random: 0
+  _civilian: 1
   _waitForNextSound: 0
 --- !u!195 &6257875502662978321
 NavMeshAgent:
@@ -2546,7 +2547,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.2
   m_Speed: 6
-  m_Acceleration: 8
+  m_Acceleration: 100
   avoidancePriority: 10
   m_AngularSpeed: 500
   m_StoppingDistance: 0

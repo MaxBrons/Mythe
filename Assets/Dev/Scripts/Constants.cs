@@ -12,6 +12,7 @@ public class Constants
     public const string _caveSectionFunctionName = "Save";
     public const string _playerSpawnpoint = "PlayerSpawnpoint";
     public const string _postProcessingTag = "PostProcessing";
+    public const string _doors = "Door";
 
     #region Save & Load System
     public const string _caveSaveLocation = "/GameSaveData";
@@ -28,7 +29,6 @@ public class Constants
     public const string _intersectionCaveSection = "IntersectionCaveSection";
     public const string _objectiveRoom = "ObjectiveRoom";
     public const float _caveSpawnTime = .1f;
-
     #endregion
 
     #region Sound
