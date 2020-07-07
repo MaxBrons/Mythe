@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
     }
     public void PlayGame() {
         SceneManager.LoadScene(1);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
     public void QuitGame() {
         //Saves the data and closes the aplication

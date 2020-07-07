@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8510345737911787618}
   - component: {fileID: 8510345737911787617}
-  - component: {fileID: -4499729121079049630}
   m_Layer: 0
   m_Name: EnemyHitSound
   m_TagString: Untagged
@@ -41,7 +40,8 @@ AudioSource:
   m_GameObject: {fileID: 8510345737911787616}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: c9de97ec64506ad40aa0b9c67724eb07,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: d0fdff04b1a25f64fbb2acb9aaaf6db3, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.3
@@ -128,19 +128,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &-4499729121079049630
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8510345737911787616}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6332c18f84bf24c46b991acfa1322e14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _clip: {fileID: 8300000, guid: d0fdff04b1a25f64fbb2acb9aaaf6db3, type: 3}
-  _loop: 0
-  _random: 0
-  _waitForNextSound: 0

@@ -1,22 +1,20 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
-[RequireComponent(typeof(Animator))]
 public class PlayerAttack : MonoBehaviour
 {
     [SerializeField] private Weapon _equipedWeapon;
     [SerializeField] private GameObject _enemyHitSound;
     private InputMaster _inputMaster;
-    //private PlayerAnimationController _controller;
+    private PlayerAnimationController _controller;
     private bool _animationIsRunning = false;
 
     private void Awake() {
-        _inputMaster = new InputMaster();
-        //_controller = GetComponent<PlayerAnimationController>();
+        _inputMaster = Player.Instance && Player.Instance._inputMaster != null ? Player.Instance._inputMaster : new InputMaster();
+        _controller = GetComponent<PlayerAnimationController>();
     }
 
     private void OnEnable() {
@@ -35,20 +33,30 @@ public class PlayerAttack : MonoBehaviour
         if (_animationIsRunning) yield break;
         SwitchAnimationRunningBool();
 
-        //_controller.SetBool(Constants._Attack_Bool, true); //Turn on the attack animation
+        _controller.SetBool(Constants._Attack_Bool,_animationIsRunning); //Turn on the attack animation
         AttackCivilian(); //Damage the civilian
 
         //Wait until the animation is done playing
-        //yield return new WaitForSeconds(_controller.GetCurrentClipLenght());
+        yield return new WaitForSeconds(_controller.GetCurrentClipLenght()*0.75f);
         SwitchAnimationRunningBool();
+        _controller.SetBool(Constants._Attack_Bool, _animationIsRunning); //Turn on the attack animation
     }
 
     private void AttackCivilian() {
         //Shoot a raycast to check if a Civilian is in range
         RaycastHit hit;
-        if (Physics.Raycast(transform.parent.position, transform.parent.forward, out hit, _equipedWeapon.GetWeaponRange(), 1 << 10)) {
+        if (Physics.Raycast(transform.position, transform.forward, out hit, _equipedWeapon.GetWeaponRange(), 1 << 10)) {
             //Damages the Civilian that the ray hits
             hit.transform.GetComponent<CV_Health>().TakeDamage(_equipedWeapon.GetWeaponDamage());
+
+            //Spawn the hit sound
+            GameObject sound = Instantiate(_enemyHitSound, hit.transform.position, Quaternion.identity);
+            Destroy(sound, 3f);
+        }
+        if (Physics.Raycast(transform.position, transform.forward, out hit, _equipedWeapon.GetWeaponRange(), 1 << 12)) {
+            if (SceneManager.GetActiveScene().buildIndex != 5) return;
+            //Damages the Civilian that the ray hits
+            hit.transform.GetComponent<Annie_Health>().TakeDamage(_equipedWeapon.GetWeaponDamage());
 
             //Spawn the hit sound
             GameObject sound = Instantiate(_enemyHitSound, hit.transform.position, Quaternion.identity);

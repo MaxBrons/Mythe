@@ -12,7 +12,7 @@ public class CV_Attack : CV_State
     public override void StartState() {
         base.StartState();
         _civilian.SetMovementSpeed(4); //Sets the movement speed of the NavMeshAgent
-        _civilian.GetNavMeshAgent().stoppingDistance = _civilian.GetAttackRange(); //Sets the stopping distance of the NavMeshAgent
+        _civilian.GetNavMeshAgent().stoppingDistance = _civilian.GetStoppingRange(); //Sets the stopping distance of the NavMeshAgent
         _animator.SetBool(Constants._Run_Bool, true);
     }
 
@@ -30,7 +30,7 @@ public class CV_Attack : CV_State
 
         //Attacks the player, if close enough to attack
         if (_attackAnimationRunning) return;
-        if (Vector3.Distance(transform.position, _civilian.GetTarget().transform.position) < _civilian.GetAttackRange()) {
+        if (Vector3.Distance(transform.position, _civilian.GetTarget().transform.position) <= _civilian.GetAttackRange()) {
             StartCoroutine(Attack());
         }
     }

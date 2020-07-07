@@ -86,10 +86,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.05
-  m_Height: 0.2
+  m_Radius: 0.035390925
+  m_Height: 0.19999999
   m_Direction: 1
-  m_Center: {x: 0, y: 0.09, z: 0}
+  m_Center: {x: 0, y: 0.089999996, z: -0.014609067}
 --- !u!54 &-1515072911511098807
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -134,10 +134,11 @@ AudioSource:
   m_GameObject: {fileID: 261237463198828265}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: c9de97ec64506ad40aa0b9c67724eb07,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 86cc9341fc78870499fce504927c847f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 1
   m_Pitch: 0.85
   Loop: 1
   Mute: 0
@@ -276,7 +277,8 @@ MonoBehaviour:
   _maxHealth: 200
   _movementSpeed: 2
   _attackSpeed: 1
-  _attackRange: 3
+  _attackRange: 3.5
+  _stoppingRange: 3
   _attackDamage: 10
   _sightRange: 10
   _hearingRange: 30

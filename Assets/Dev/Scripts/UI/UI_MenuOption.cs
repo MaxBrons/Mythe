@@ -14,21 +14,20 @@ public class UI_MenuOption : MonoBehaviour
 
     private void Start() {
         if (!_text) return;
-        _text.text = Mathf.Round(_slider.value * 100) + percentage;
+        _text.text = Mathf.Round(_slider.value) + percentage;
     }
     public void OnSliderValueChange() {
-        float value = Mathf.Clamp01(_slider.value);
-
-        UpdateSetting(_optionType, value);
+        float value = _slider.value / _slider.maxValue * 100;
+        UpdateSetting(_optionType, _slider.value);
         UpdateText(value);
     }
 
     private void UpdateText(float value) {
         if (!_text) return;
-        _text.text = Mathf.Round(value * 100) + percentage;
+        _text.text = Mathf.Round(value) + percentage;
     }
     private void UpdateSetting(OptionType type, float value) {
-        if (type == OptionType.GlobalVolume) Settings.UpdateGlobalVolume(value);
-        else if (type == OptionType.MouseSensitivity) Settings.UpdateMouseSensitivity(value * 100);
+        if (type == OptionType.GlobalVolume) Settings.UpdateGlobalVolume(_slider.value - _slider.maxValue);
+        else if (type == OptionType.MouseSensitivity) Settings.UpdateMouseSensitivity(value);
     }
 }

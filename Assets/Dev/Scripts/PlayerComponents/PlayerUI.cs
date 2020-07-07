@@ -9,12 +9,15 @@ public class PlayerUI : MonoBehaviour
     private Vignette _vignette;
     private PostProcessVolume _volume;
 
-    private void OnEnable() => EventHandler.Instance.OnPlayerDamage += OnPlayerTakeDamage;
-    private void OnDisable() => EventHandler.Instance.OnPlayerDamage -= OnPlayerTakeDamage;
+    private void OnDestroy() => EventHandler.Instance.OnPlayerDamage -= OnPlayerTakeDamage;
     private void Start() {
         _healht = GetComponent<PlayerHealth>();
         _volume = GameObject.FindGameObjectWithTag(Constants._postProcessingTag).GetComponent<PostProcessVolume>();
         _volume.profile.TryGetSettings(out _vignette);
+        EventHandler.Instance.OnPlayerDamage += OnPlayerTakeDamage;
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     //Change the vignette value depending on how much health left

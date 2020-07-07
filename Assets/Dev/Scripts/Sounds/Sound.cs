@@ -12,14 +12,11 @@ public class Sound : MonoBehaviour
     [SerializeField] private bool _civilian = false;
     [SerializeField] private float _waitForNextSound = 120;
     private AudioSource _source;
-    private void OnDestroy() => SoundManager.Instance.OnGlobalVolumeChange -= UpdateVolume;
+
     private void Start() {
         //Set the start values of the Audio Source
         _source = GetComponent<AudioSource>();
         _source.volume = Settings._globalVolume;
-
-        //Function is called when the player updates the sound settings
-        SoundManager.Instance.OnGlobalVolumeChange += UpdateVolume;
 
         //Plays the audio according to the set variables
         StartCoroutine(Play(_loop, _waitForNextSound, _random));

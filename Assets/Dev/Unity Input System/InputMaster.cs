@@ -246,6 +246,17 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0fe263e9-d6c8-40d7-83b4-444d168fa437"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -260,6 +271,14 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Tab"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""5e62acca-2357-4d6a-97a1-ab0edb965c37"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -271,6 +290,39 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": ""Keyboard and mouse"",
                     ""action"": ""Esc"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""14deec7a-76e5-4bb3-baba-0b6956c4ec5a"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Esc"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""47c78002-7898-4ed0-9386-379bf83551d6"",
+                    ""path"": ""<Keyboard>/tab"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard and mouse"",
+                    ""action"": ""Tab"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bfa896a2-5e10-4c85-84b2-d7049b2fec95"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Tab"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -317,6 +369,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
         // UserInterface
         m_UserInterface = asset.FindActionMap("UserInterface", throwIfNotFound: true);
         m_UserInterface_Esc = m_UserInterface.FindAction("Esc", throwIfNotFound: true);
+        m_UserInterface_Tab = m_UserInterface.FindAction("Tab", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -432,11 +485,13 @@ public class @InputMaster : IInputActionCollection, IDisposable
     private readonly InputActionMap m_UserInterface;
     private IUserInterfaceActions m_UserInterfaceActionsCallbackInterface;
     private readonly InputAction m_UserInterface_Esc;
+    private readonly InputAction m_UserInterface_Tab;
     public struct UserInterfaceActions
     {
         private @InputMaster m_Wrapper;
         public UserInterfaceActions(@InputMaster wrapper) { m_Wrapper = wrapper; }
         public InputAction @Esc => m_Wrapper.m_UserInterface_Esc;
+        public InputAction @Tab => m_Wrapper.m_UserInterface_Tab;
         public InputActionMap Get() { return m_Wrapper.m_UserInterface; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -449,6 +504,9 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 @Esc.started -= m_Wrapper.m_UserInterfaceActionsCallbackInterface.OnEsc;
                 @Esc.performed -= m_Wrapper.m_UserInterfaceActionsCallbackInterface.OnEsc;
                 @Esc.canceled -= m_Wrapper.m_UserInterfaceActionsCallbackInterface.OnEsc;
+                @Tab.started -= m_Wrapper.m_UserInterfaceActionsCallbackInterface.OnTab;
+                @Tab.performed -= m_Wrapper.m_UserInterfaceActionsCallbackInterface.OnTab;
+                @Tab.canceled -= m_Wrapper.m_UserInterfaceActionsCallbackInterface.OnTab;
             }
             m_Wrapper.m_UserInterfaceActionsCallbackInterface = instance;
             if (instance != null)
@@ -456,6 +514,9 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 @Esc.started += instance.OnEsc;
                 @Esc.performed += instance.OnEsc;
                 @Esc.canceled += instance.OnEsc;
+                @Tab.started += instance.OnTab;
+                @Tab.performed += instance.OnTab;
+                @Tab.canceled += instance.OnTab;
             }
         }
     }
@@ -489,5 +550,6 @@ public class @InputMaster : IInputActionCollection, IDisposable
     public interface IUserInterfaceActions
     {
         void OnEsc(InputAction.CallbackContext context);
+        void OnTab(InputAction.CallbackContext context);
     }
 }

@@ -9,21 +9,24 @@ public class UI_MenuManager : MonoBehaviour
     private GameObject _currentMenu;
     private InputMaster _inputMaster;
     private bool _menuOpened = false;
+    private bool _invOpen = false;
 
     private void Start() {
         //Sets the values of the input to the corresponding stored variables
-        _inputMaster = Player.Instance._inputMaster;
+        _inputMaster = Player.Instance && Player.Instance._inputMaster != null ? Player.Instance._inputMaster : new InputMaster();
         _inputMaster.UserInterface.Esc.Enable();
         _inputMaster.UserInterface.Esc.performed += ctx => OnEscPressed();
-
-        //Hide the cursor when the game first starts
-        SwitchCursorVisible();
+        _inputMaster.UserInterface.Tab.Enable();
+        _inputMaster.UserInterface.Tab.performed += ctx => OnTabPressed();
     }
     private void OnApplicationFocus(bool focus) {
-        if(!focus && !_menuOpened) OnEscPressed();
+        //Open pauze menu automaticly when out of focus
+        if (!focus && !_menuOpened) OnEscPressed();
     }
 
     private void OnEscPressed() {
+        if (_invOpen) return;
+
         //Close the previous window if there was one open
         if (_currentMenu) {
             CloseMenu();
@@ -42,6 +45,11 @@ public class UI_MenuManager : MonoBehaviour
         SwitchCursorVisible();
     }
 
+    private void OnTabPressed() {
+        if (_menuOpened) return;
+        _menuObjects[1].SetActive(!_menuObjects[1].activeSelf);
+    }
+
     private void SwitchCursorVisible() {
         //Turns off/ on the lock on the cursor and makes it visible/invisible
         Cursor.lockState = Cursor.lockState == CursorLockMode.Locked ? CursorLockMode.None : CursorLockMode.Locked;
@@ -50,6 +58,7 @@ public class UI_MenuManager : MonoBehaviour
 
     private void CloseMenu() {
         //This will close the opened menu
+        _menuScreensObject.SetActive(true);
         _currentMenu.SetActive(false);
         _currentMenu = null;
     }
@@ -57,7 +66,15 @@ public class UI_MenuManager : MonoBehaviour
     public void UpdateCurrentMenu(int menu) {
         //Set the current menu to the new menu and close the previous menu
         if (_currentMenu != null) _currentMenu.SetActive(false);
+
         _currentMenu = _menuObjects[menu];
         _menuObjects[menu].SetActive(true);
+        _menuScreensObject.SetActive(false);
+    }
+
+    public void GoToScene(int index) {
+        OnEscPressed();
+        SwitchCursorVisible();
+        LevelLoader.Instance.LoadLevel(index);
     }
 }

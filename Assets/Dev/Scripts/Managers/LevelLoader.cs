@@ -11,6 +11,7 @@ public class LevelLoader : MonoBehaviour
     [SerializeField] private GameObject _loadingScreen;
     [SerializeField] private Slider _loadingPercentageBar;
     [SerializeField] private Text _loadingPercentageText;
+    [SerializeField] private Animator _fadeScreen;
 
     private void Awake() => Instance = Instance ? Instance : this;
 
@@ -20,9 +21,13 @@ public class LevelLoader : MonoBehaviour
 
     private IEnumerator LoadSceneAsync(int index) {
         //Load scene in async for the loading screen/ loading bar
-        AsyncOperation operation = SceneManager.LoadSceneAsync(index);
-        _loadingScreen.SetActive(true);
+        _fadeScreen.SetBool(Constants._fade_Bool, true);
 
+        yield return new WaitForSeconds(1); //Wait until the fadeout animation is done playing
+        AsyncOperation operation = SceneManager.LoadSceneAsync(index); //Load in the scene
+        _loadingScreen.SetActive(true); //Enable the loading screen
+
+        //Update the loading bar
         while (!operation.isDone) {
             float progress = Mathf.Clamp01(operation.progress / .9f);
 
@@ -31,7 +36,17 @@ public class LevelLoader : MonoBehaviour
 
             yield return null;
         }
-        yield return new WaitForSeconds(.5f);
-        _loadingScreen.SetActive(false);
+        yield return new WaitForSeconds(.3f); //Wait
+
+        _fadeScreen.SetBool(Constants._fade_Bool,false); //Start the fadein animation
+        CheckForAudioListeners(); //Make sure only one audio listener is active in the scene
+
+        //Spawn the player at the last entered door position
+        if (ObjectiveManager.Instance._playerCameFromObjectiveRoom) Player.Instance.SpawnAtLastEnteredDoorPosition();
+        _loadingScreen.SetActive(false); //Disable the loading screen again
+    }
+    private void CheckForAudioListeners() {
+        GameObject cam = GameObject.FindGameObjectWithTag(Constants._mainCamera);
+        Player.Instance.transform.GetChild(0).GetComponent<AudioListener>().enabled = cam && cam.GetComponent<AudioListener>() ? false : true;
     }
 }

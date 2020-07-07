@@ -9,15 +9,18 @@ public class Player : MonoBehaviour
     public InputMaster _inputMaster { get; private set; }
     public Vector3 LastSpawnpointPosition { get; set; }
 
+    //Destroys the object if there are more than 1 of
     private void Awake() {
-        //Destroys the object if there are more than 1 of
         Instance = Instance ? Instance : this;
+        _inputMaster = new InputMaster();
+    }
+
+    private void Start() {
         if (Instance != this) {
             Destroy(gameObject);
             return;
         }
 
-        _inputMaster = new InputMaster();
         DontDestroyOnLoad(gameObject);
     }
     public void ChangeUserInput(bool value) {

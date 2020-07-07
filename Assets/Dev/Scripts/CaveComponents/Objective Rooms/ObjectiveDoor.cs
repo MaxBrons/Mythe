@@ -14,7 +14,7 @@ public class ObjectiveDoor : MonoBehaviour
     private int _rand;
 
     private void Awake() {
-        _interaction = new InputMaster();
+        _interaction = Player.Instance && Player.Instance._inputMaster != null ? Player.Instance._inputMaster : new InputMaster();
         _interaction.Player.Interact.performed += ctx => OnInputButtonPressed();
         _interaction.Player.Interact.Enable();
         _rand = Random.Range(0, 3);
@@ -59,7 +59,6 @@ public class ObjectiveDoor : MonoBehaviour
 
         //Set the player's position to the stored position from before entering the objective room
         if (_fromObjectiveRoom) {
-            Player.Instance.SpawnAtLastEnteredDoorPosition();
             ObjectiveManager.Instance._playerCameFromObjectiveRoom = true;
         }
 

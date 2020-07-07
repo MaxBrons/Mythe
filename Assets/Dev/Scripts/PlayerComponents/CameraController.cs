@@ -14,7 +14,7 @@ public class CameraController : MonoBehaviour
     private float _xRotation = 0;
 
     private void Start() {
-        _inputMaster = Player.Instance._inputMaster;
+        _inputMaster = Player.Instance && Player.Instance._inputMaster != null ? Player.Instance._inputMaster : new InputMaster();
         _rb = GetComponent<Rigidbody>();
 
         //Sets the values of the input to the corresponding stored variables

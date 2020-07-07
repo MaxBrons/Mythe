@@ -12,6 +12,7 @@ public class Civilian : MonoBehaviour
     [SerializeField] private float _movementSpeed = 3.5f;
     [SerializeField] private float _attackSpeed = 1;
     [SerializeField] private float _attackRange = 3;
+    [SerializeField] private float _stoppingRange = 2.5f;
     [SerializeField] private float _attackDamage = 10;
     [SerializeField] private float _sightRange = 10;
     [SerializeField] private float _hearingRange = 30;
@@ -20,7 +21,7 @@ public class Civilian : MonoBehaviour
     private bool dead = false;
     private void Awake() {
         _navAgent = _navAgent ? _navAgent : GetComponent<NavMeshAgent>();
-        _navAgent.stoppingDistance = _attackRange - 0.5f;
+        _navAgent.stoppingDistance = _stoppingRange;
         _navAgent.speed = _movementSpeed;
         TogglePelvisRigidBodies(true);
     }
@@ -42,6 +43,7 @@ public class Civilian : MonoBehaviour
     public float GetMaxHealth() { return _maxHealth; }
     public float GetAttackDamage() { return _attackDamage; }
     public float GetAttackRange() { return _attackRange; }
+    public float GetStoppingRange() { return _stoppingRange; }
     public float GetSightRange() { return _sightRange; }
     public float GetHearingRange() { return _hearingRange; }
     public NavMeshAgent GetNavMeshAgent() { return _navAgent; }
