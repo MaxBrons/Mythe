@@ -14,7 +14,7 @@ public class PlayerHealth : MonoBehaviour
         if (_health <= 0) {
             SpawnBag();
             ResetPlayer();
-            LevelLoader.Instance.LoadLevel(2);
+            LevelLoader.Instance.LoadLevel(7);
             return;
         }
         _eventHandler.DamagePlayer();

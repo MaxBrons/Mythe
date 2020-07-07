@@ -223,8 +223,8 @@ GameObject:
   m_Component:
   - component: {fileID: 972485651}
   - component: {fileID: 972485650}
-  - component: {fileID: 972485649}
   - component: {fileID: 972485652}
+  - component: {fileID: 972485649}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -441,6 +441,46 @@ PrefabInstance:
     - target: {fileID: 80982690105404691, guid: f82992a1a4678de45a464e082d93d05a,
         type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1572917390750202379, guid: f82992a1a4678de45a464e082d93d05a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2787647478791181940, guid: f82992a1a4678de45a464e082d93d05a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2787647478791181940, guid: f82992a1a4678de45a464e082d93d05a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2787647478791181940, guid: f82992a1a4678de45a464e082d93d05a,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2787647478791181940, guid: f82992a1a4678de45a464e082d93d05a,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2787647478791181940, guid: f82992a1a4678de45a464e082d93d05a,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2787647478791181940, guid: f82992a1a4678de45a464e082d93d05a,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2787647478791181940, guid: f82992a1a4678de45a464e082d93d05a,
+        type: 3}
+      propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5080563333357864180, guid: f82992a1a4678de45a464e082d93d05a,

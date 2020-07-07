@@ -7,7 +7,8 @@ public class ObjectiveRoom : MonoBehaviour
     [SerializeField] private Transform _fromStartSpawnpoint;
 
     private void Start() {
-        if (CheckIfCameFromStart()) return;
+        StartCoroutine(CheckIfCameFromStart());
+        if (_fromStartSpawnpoint) return;
 
         ObjectiveManager.Instance.TryUpdateClearedRooms();
 
@@ -16,13 +17,12 @@ public class ObjectiveRoom : MonoBehaviour
         Player.Instance.SetPosition(_spawnpoint.transform.position);
     }
 
-    private bool CheckIfCameFromStart() {
+    private IEnumerator CheckIfCameFromStart() {
         //Spawn the player at beginning of first level
         if (ObjectiveManager.Instance._spawnPlayerFromSpawn) {
+            yield return new WaitForSeconds(.5f);
             Player.Instance.SetPosition(_fromStartSpawnpoint.transform.position);
             ObjectiveManager.Instance._spawnPlayerFromSpawn = false;
-            return true;
         }
-        return false;
     }
 }

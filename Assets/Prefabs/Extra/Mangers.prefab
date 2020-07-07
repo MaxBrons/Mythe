@@ -71,6 +71,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29b81a8cc92d8ef47a188fb5fa170375, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _mixer: {fileID: 24100000, guid: c9de97ec64506ad40aa0b9c67724eb07, type: 2}
 --- !u!114 &5882441731614846350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,6 +88,8 @@ MonoBehaviour:
     type: 3}
   _loadingPercentageBar: {fileID: 0}
   _loadingPercentageText: {fileID: 0}
+  _fadeScreen: {fileID: 9112710537135602180, guid: 504fa40e494ba7743974ff12b07ecbee,
+    type: 3}
 --- !u!114 &1639312104326123152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,4 +102,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5651ccefe5ff1a47978113c3a820f4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spanwpoint: {fileID: 0}

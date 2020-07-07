@@ -18,6 +18,7 @@ TagManager:
   - AI Annie
   - PostProcessing
   - Door
+  - PlayerCamera
   layers:
   - Default
   - TransparentFX

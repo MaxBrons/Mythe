@@ -23,10 +23,5 @@ public class Annie_Move : MonoBehaviour
     private void LateUpdate() {
         _agent.SetDestination(_player.transform.position);
         transform.LookAt(_player.transform);
-        if (Vector2.Distance(_player.transform.position, transform.position) <= _agent.stoppingDistance) {
-            if (_animator.GetBool(Constants._Move_Bool)) _animator.SetBool(Constants._Move_Bool, false);
-            return;
-        }
-        if (!_animator.GetBool(Constants._Move_Bool)) _animator.SetBool(Constants._Move_Bool, true);
     }
 }

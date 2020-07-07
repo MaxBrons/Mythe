@@ -20,4 +20,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main Scenes/Objective Rooms Scene.unity
     guid: cb492330a152bfd4090334deca9681cb
+  - enabled: 1
+    path: Assets/Scenes/Main Scenes/Bossfight.unity
+    guid: 17f7d3dde6c06354fa3f9be3ec46f0be
+  - enabled: 1
+    path: Assets/Scenes/Main Scenes/WinScene.unity
+    guid: e9125081c1f9c9b4e828389cdb817e96
+  - enabled: 1
+    path: Assets/Scenes/Main Scenes/DeathScene.unity
+    guid: b742cefd16f768a49b2ecdd584df2e0f
   m_configObjects: {}

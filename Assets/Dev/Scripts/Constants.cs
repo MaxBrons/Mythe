@@ -6,6 +6,8 @@ using UnityEngine.Animations;
 public class Constants
 {
     public const string _navMeshComponents = "NavMeshComponents";
+    public const string _mainCamera = "MainCamera";
+    public const string _playerCamera = "PlayerCamera";
     public const string _player = "Player";
     public const string _mainPlayer = "Main Player";
     public const string _managersTag = "Managers";
@@ -33,12 +35,15 @@ public class Constants
 
     #region Sound
     public const string _soundHeader = "Sounds";
+    public const string _audioMixerVolume = "volume";
     #endregion
 
     #region Animation State Names
     public const string _Move_Bool = "Move";
     public const string _Run_Bool = "Run";
     public const string _Attack_Bool = "Attack";
+
+    public const string _fade_Bool = "Fade";
     #endregion
 
 }
